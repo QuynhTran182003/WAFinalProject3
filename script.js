@@ -1,7 +1,5 @@
 $(document).ready(function(){
-    // $("header").fadeIn(1000);
-    $("body").fadeIn(1200);
-    $("#welcome").fadeIn(2000);
-
-    
+    $("body").fadeIn(1000);
+    $("header").fadeIn(2500);
+    $("#welcome").addClass('animated fadeInUp');
 });

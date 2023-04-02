@@ -1,0 +1,65 @@
+[
+    {
+        "Id": 1,
+        "Product": "Miso Soup",
+        "Price": 99,
+        "Description": "miso",
+        "Category": "Soup"
+    },
+    {
+        "Id": 31,
+        "Product": "Fried noodle with chicken",
+        "Price": 239,
+        "Description": "vegetable, salad, mango sauce, fried chicken",
+        "Category": "Hot food"
+    },
+    {
+        "Id": 103,
+        "Product": "nigiri",
+        "Price": 69,
+        "Description": "kousek ryze pokryty platci ryby",
+        "Category": "Sushi"
+    },
+    {
+        "Id": 501,
+        "Product": "california",
+        "Price": 199,
+        "Description": "rolka zabalena vrstvou ryze",
+        "Category": "Sushi"
+    },
+    {
+        "Id": 904,
+        "Product": "menu 1",
+        "Price": 699,
+        "Description": "1x maki, 2x ni, 1x cali, 3x sashimi, 1/2 crunchy roll",
+        "Category": "Sushi"
+    },
+    {
+        "Id": 905,
+        "Product": "menu 2",
+        "Price": 1399,
+        "Description": "2x maki, 4x nigiri, 2x california, 6x sashimi, 1x crunchy roll",
+        "Category": "Sushi"
+    },
+    {
+        "Id": "N1",
+        "Product": "Cola",
+        "Price": 49,
+        "Description": null,
+        "Category": "Drink"
+    },
+    {
+        "Id": "L1",
+        "Product": "Lime",
+        "Price": 119,
+        "Description": "lime juice, mint leaves, dark sugar, sirup",
+        "Category": "Drink"
+    },
+    {
+        "Id": "C1",
+        "Product": "Cuba Libre",
+        "Price": 139,
+        "Description": "cola, rum, ice",
+        "Category": "Drink"
+    }
+]
