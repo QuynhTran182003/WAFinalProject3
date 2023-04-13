@@ -65,129 +65,145 @@
         </div>
     </header>
 
-    <main class="bg-black d-flex container-fluid m-0 p-5">
-        <nav class="text-white m-4">
-            <h4 class="p-2 text-center text-warning">Categories</h4>
-            <div class="dividerHorizontal m-2"></div>
-            <ul class="list-group-flush ">
-                <li class="list-group-item bg-black text-warning py-2" id="Nigiri">Nigiri</li>
-                <li class="list-group-item bg-black text-warning py-2" id="Aburi Nigiri">Aburi Nigiri</li>
-                <li class="list-group-item bg-black text-warning py-2" id="Maki">Maki</li>
-                <li class="list-group-item bg-black text-warning py-2" id="Ura Maki">Ura Maki</li>
-                <li class="list-group-item bg-black text-warning py-2" id="Special Ura Maki">Special Ura Maki</li>
-                <li class="list-group-item bg-black text-warning py-2" id="Futo">Futo</li>
-                <li class="list-group-item bg-black text-warning py-2" id="Sashimi">Sashimi</li>
-                <li class="list-group-item bg-black text-warning py-2" id="Menu">Menu</li>
-              </ul>
-        </nav>
-        <div class="content d-flex flex-wrap justify-content-between m-2">
-            <div class="card bg-black m-4 border-warning-subtle " style="width: 18rem;">
-                <img src="media/background.jpg" class="card-img-top" alt="..." >
-                <div class="card-body">
-                    <div class="card-info d-flex justify-content-between m-2 text-white">
-                        <h5 class="card-title">Id. Card Title</h5>
-                        <h5 class="card-title">... Kč</h5>
-                    </div>
-                    <div class="quantityDiv d-flex justify-content-between m-2 ">
-                        <div class="input-group w-50 text-white">
-                            <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
+    <main class="bg-black d-flex  p-0">
+        <div class="row m-0">
+            <nav class="col-md-2 m-md-5 p-0 ">
+                <h5 class="p-3 text-center text-black bg-warning rounded">Category</h5>
+                <ul class="list-group list-group-flush ">
+                    <li class="list-group-item bg-black text-light py-2" id="Nigiri">Nigiri</li>
+                    <li class="list-group-item bg-black text-light py-2" id="Aburi Nigiri" type="button">Aburi Nigiri</li>
+                    <li class="list-group-item bg-black text-light py-2" id="Maki" type="button">Maki</li>
+                    <li class="list-group-item bg-black text-light py-2" id="Ura Maki" type="button">Ura Maki</li>
+                    <li class="list-group-item bg-black text-light py-2" id="Special Ura Maki" type="button">Special Ura Maki</li>
+                    <li class="list-group-item bg-black text-light py-2" id="Futo" type="button">Futo</li>
+                    <li class="list-group-item bg-black text-light py-2" id="Sashimi" type="button">Sashimi</li>
+                    <li class="list-group-item bg-black text-light py-2" id="Menu" type="button">Menu</li>
+                </ul>
+            </nav>
+            <div class="col-md container p-0">
+                <div class="row m-0 d-flex flex-wrap">
+                    <div class="col-lg-4 col-md-6 ">
+                        <div class="card bg-black my-5 mx-3 border-warning-subtle" >
+                        <img src="media/background.jpg" class="card-img-top" alt="..." >
+                        <div class="card-body">
+                            <div class="card-info d-flex justify-content-between m-2 text-white">
+                                <h5 class="card-title">Id. Card Title</h5>
+                                <h5 class="card-title">... Kč</h5>
+                            </div>
+                            <div class="quantityDiv d-flex justify-content-between m-2 flex-wrap ">
+                                <div class="input-group w-50 text-white">
+                                    <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
+                                </div>
+                                <button class="btn btn-warning d-flex align-items-center">
+                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
+                            </div>
+                            
                         </div>
-                        <button class="btn btn-warning d-flex align-items-center">
-                            <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card bg-black my-5 mx-3 border-warning-subtle" >
+                        <img src="media/background.jpg" class="card-img-top" alt="..." >
+                        <div class="card-body">
+                            <div class="card-info d-flex justify-content-between m-2 text-white">
+                                <h5 class="card-title">Id. Card Title</h5>
+                                <h5 class="card-title">... Kč</h5>
+                            </div>
+                            <div class="quantityDiv d-flex justify-content-between m-2 flex-wrap ">
+                                <div class="input-group w-50 text-white">
+                                    <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
+                                </div>
+                                <button class="btn btn-warning d-flex align-items-center">
+                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card bg-black my-5 mx-3 border-warning-subtle" >
+                        <img src="media/background.jpg" class="card-img-top" alt="..." >
+                        <div class="card-body">
+                            <div class="card-info d-flex justify-content-between m-2 text-white">
+                                <h5 class="card-title">Id. Card Title</h5>
+                                <h5 class="card-title">... Kč</h5>
+                            </div>
+                            <div class="quantityDiv d-flex justify-content-between m-2 flex-wrap ">
+                                <div class="input-group w-50 text-white">
+                                    <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
+                                </div>
+                                <button class="btn btn-warning d-flex align-items-center">
+                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card bg-black my-5 mx-3 border-warning-subtle" >
+                        <img src="media/background.jpg" class="card-img-top" alt="..." >
+                        <div class="card-body">
+                            <div class="card-info d-flex justify-content-between m-2 text-white">
+                                <h5 class="card-title">Id. Card Title</h5>
+                                <h5 class="card-title">... Kč</h5>
+                            </div>
+                            <div class="quantityDiv d-flex justify-content-between m-2 flex-wrap ">
+                                <div class="input-group w-50 text-white">
+                                    <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
+                                </div>
+                                <button class="btn btn-warning d-flex align-items-center">
+                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card bg-black my-5 mx-3 border-warning-subtle" >
+                        <img src="media/background.jpg" class="card-img-top" alt="..." >
+                        <div class="card-body">
+                            <div class="card-info d-flex justify-content-between m-2 text-white">
+                                <h5 class="card-title">Id. Card Title</h5>
+                                <h5 class="card-title">... Kč</h5>
+                            </div>
+                            <div class="quantityDiv d-flex justify-content-between m-2 flex-wrap ">
+                                <div class="input-group w-50 text-white">
+                                    <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
+                                </div>
+                                <button class="btn btn-warning d-flex align-items-center">
+                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card bg-black my-5 mx-3 border-warning-subtle" >
+                        <img src="media/background.jpg" class="card-img-top" alt="..." >
+                        <div class="card-body">
+                            <div class="card-info d-flex justify-content-between m-2 text-white">
+                                <h5 class="card-title">Id. Card Title</h5>
+                                <h5 class="card-title">... Kč</h5>
+                            </div>
+                            <div class="quantityDiv d-flex justify-content-between m-2 flex-wrap ">
+                                <div class="input-group w-50 text-white">
+                                    <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
+                                </div>
+                                <button class="btn btn-warning d-flex align-items-center">
+                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
+                            </div>
+                            
+                        </div>
+                    </div>
                     </div>
                     
-                </div>
-            </div>
-
-            <div class="card bg-black m-4 border-warning-subtle " style="width: 18rem;">
-                <img src="media/background.jpg" class="card-img-top" alt="..." >
-                <div class="card-body">
-                    <div class="card-info d-flex justify-content-between m-2 text-white">
-                        <h5 class="card-title">Id. Card Title</h5>
-                        <h5 class="card-title">... Kč</h5>
-                    </div>
-                    <div class="quantityDiv d-flex justify-content-between m-2 ">
-                        <div class="input-group w-50 text-white">
-                            <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
-                        </div>
-                        <button class="btn btn-warning d-flex align-items-center">
-                            <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
-                    </div>
                     
+                      
                 </div>
             </div>
-            <div class="card bg-black m-4 border-warning-subtle " style="width: 18rem;">
-                <img src="media/background.jpg" class="card-img-top" alt="..." >
-                <div class="card-body">
-                    <div class="card-info d-flex justify-content-between m-2 text-white">
-                        <h5 class="card-title">Id. Card Title</h5>
-                        <h5 class="card-title">... Kč</h5>
-                    </div>
-                    <div class="quantityDiv d-flex justify-content-between m-2 ">
-                        <div class="input-group w-50 text-white">
-                            <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
-                        </div>
-                        <button class="btn btn-warning d-flex align-items-center">
-                            <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="card bg-black m-4 border-warning-subtle " style="width: 18rem;">
-                <img src="media/background.jpg" class="card-img-top" alt="..." >
-                <div class="card-body">
-                    <div class="card-info d-flex justify-content-between m-2 text-white">
-                        <h5 class="card-title">Id. Card Title</h5>
-                        <h5 class="card-title">... Kč</h5>
-                    </div>
-                    <div class="quantityDiv d-flex justify-content-between m-2 ">
-                        <div class="input-group w-50 text-white">
-                            <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
-                        </div>
-                        <button class="btn btn-warning d-flex align-items-center">
-                            <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="card bg-black m-4 border-warning-subtle " style="width: 18rem;">
-                <img src="media/background.jpg" class="card-img-top" alt="..." >
-                <div class="card-body">
-                    <div class="card-info d-flex justify-content-between m-2 text-white">
-                        <h5 class="card-title">Id. Card Title</h5>
-                        <h5 class="card-title">... Kč</h5>
-                    </div>
-                    <div class="quantityDiv d-flex justify-content-between m-2 ">
-                        <div class="input-group w-50 text-white">
-                            <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
-                        </div>
-                        <button class="btn btn-warning d-flex align-items-center">
-                            <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="card bg-black m-4 border-warning-subtle " style="width: 18rem;">
-                <img src="media/background.jpg" class="card-img-top" alt="..." >
-                <div class="card-body">
-                    <div class="card-info d-flex justify-content-between m-2 text-white">
-                        <h5 class="card-title">Id. Card Title</h5>
-                        <h5 class="card-title">... Kč</h5>
-                    </div>
-                    <div class="quantityDiv d-flex justify-content-between m-2 ">
-                        <div class="input-group w-50 text-white">
-                            <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
-                        </div>
-                        <button class="btn btn-warning d-flex align-items-center">
-                            <img src="media/shopping-cart16.png" alt="">   
-                            <span class="px-1">Add</span>
-                        </button>
-                    </div>
-                    
-                </div>
-            </div>
-              
         </div>
+        
+        
     </main>
 
     <footer class="container-fluid bg-black text-white d-flex flex-column text-center p-2 border-top border-warning">
@@ -225,7 +241,9 @@
             </div>
         </div>
         
-        <!-- <div class="dividerFoot text-center"></div> -->
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1664.0893765303474!2d14.516317549564803!3d49.96679467075129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b8f5a0dfd7e13%3A0x25ea1859119c5674!2sShiba%20Sushi%20Restaurace!5e0!3m2!1svi!2scz!4v1681400258023!5m2!1svi!2scz" 
+        style="height: 28rem; border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
 
         <div class="containerContactIcon m-2">
             <a href="https://www.facebook.com/profile.php?id=100005155502657" class="m-2"><img class="contactIcon" src="media/facebook.png" alt="fb"></a>
@@ -239,9 +257,20 @@
     <script>
         $(document).ready(function(){
             //need to load MENU from api (not created)
-            $(".list-group-item").mouseenter(function(){
-                $(this).css("cursor", "pointer");
-            })
+            
+            $(".list-group-item").on({
+                mouseenter: function(){
+                    $(this).removeClass("text-light");
+                    $(this).addClass("text-warning");
+                },  
+                mouseleave: function(){
+                    $(this).removeClass("text-warning");
+                    $(this).addClass("text-light");
+                }, 
+                click: function(){
+                    $(this).addClass("text-warning");
+                }  
+            });
 
             $(".list-group-item").click(function(){
                 alert(`You clicked on ${this.id}` );
