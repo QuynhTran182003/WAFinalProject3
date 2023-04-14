@@ -13,28 +13,28 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
     <header class="bg-black border-bottom border-warning shadow">
         <div class="containerHeader p-2 align-items-center justify-content-evenly" >
+            <!-- 1.part selection -->
             <ul class="nav d-flex align-items-center">
                 <li class="nav-item">
                     <a class="nav-link text-white" href="index.html"><p class="h5">Home</p></a>
                 </li>
                 <span class="dividerVertical text-white"></span>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#"><p class="h5">Menu</p></a>
+                    <a class="nav-link text-white" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><p class="h5">Menu</p></a>
                 </li>
             </ul>
-
+            <!-- logo and brand -->
             <h2 class="title">
                 <a href="index.html" class="text-decoration-none text-white d-flex align-items-center">
                     <img src="media\logo.png" alt=""  width="80" height="80">
                     Shiba Sushi
                 </a>
             </h2>
-
+            <!-- 2.part selection -->
             <ul class="nav d-flex align-items-center">
                 <li class="nav-item">
                     <a class="nav-link text-white" href="#"><p class="h5">Gallery</p></a>
@@ -45,19 +45,20 @@
                 </li>
             </ul>
         </div>
-
         <div class="containerCollapsed justify-content-center align-items-center p-1" >
+            <!-- logo -->
             <a href="index.html" class="text-decoration-none ">
                 <h2 class="title ">
                     <img src="media\logo.png" alt=""  width="75" height="75">
                 </h2>
             </a>
+            <!-- dropdown list -->
             <div class="dropdown position-absolute top-40 end-0 m-2 p-2">
                 <img src="media/menu.png" class="dropdown-toggle" alt="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 
                 <ul class="dropdown-menu bg-dark rounded">
                   <li><a class="dropdown-item text-white d-flex align-items-center" href="index.html"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a></li>
-                  <li><a class="dropdown-item text-white d-flex align-items-center" href="menu.html"><img src="media/menu24.png" alt=""><span class="mx-2">Menu</span></a></li>
+                  <li><a class="dropdown-item text-white d-flex align-items-center" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><img src="media/menu24.png" alt=""><span class="mx-2">Menu</span></a></li>
                   <li><a class="dropdown-item text-white d-flex align-items-center" href="#"><img src="media/gallery24.png" alt=""><span class="mx-2">Gallery</span></a></li>
                   <li><a class="dropdown-item text-white d-flex align-items-center" href="#"><img src="media/telephone.png" alt=""><span class="mx-2">Contact</span></a></li>
                 </ul>
@@ -65,10 +66,13 @@
         </div>
     </header>
 
-    <main class="bg-black d-flex  p-0">
+    <main class="bg-black d-flex p-0">
         <div class="row m-0">
-            <nav class="col-md-2 m-md-5 p-0 ">
+            <!-- navigation -->
+            <nav class="col-sm-2 m-sm-5 p-0 ">
+                <!-- title navigation -->
                 <h5 class="p-3 text-center text-black bg-warning rounded">Category</h5>
+                <!-- list of category -->
                 <ul class="list-group list-group-flush ">
                     <li class="list-group-item bg-black text-light py-2" id="Nigiri">Nigiri</li>
                     <li class="list-group-item bg-black text-light py-2" id="Aburi Nigiri" type="button">Aburi Nigiri</li>
@@ -80,9 +84,31 @@
                     <li class="list-group-item bg-black text-light py-2" id="Menu" type="button">Menu</li>
                 </ul>
             </nav>
-            <div class="col-md container p-0">
+            <!-- container items -->
+            <div class="col-sm container p-0">
+                <!-- row -->
                 <div class="row m-0 d-flex flex-wrap">
-                    <div class="col-lg-4 col-md-6 ">
+                    <!-- columns -->
+                    <div class="p-0 col-xl-3 col-lg-4 col-md-6 ">
+                        <!-- card item -->
+                        <div class="card bg-black my-5 mx-3 border-warning-subtle" >
+                        <img src="media/background.jpg" class="card-img-top" alt="..." >
+                        <div class="card-body">
+                            <div class="card-info d-flex justify-content-between m-2 text-white">
+                                <h5 class="card-title">Id. Card Title</h5>
+                                <h5 class="card-title">... Kč</h5>
+                            </div>
+                            <div class="quantityDiv d-flex justify-content-between m-2 flex-wrap ">
+                                <div class="input-group w-50 text-white">
+                                    <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
+                                </div>
+                                <button class="btn btn-warning d-flex align-items-center">
+                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="p-0 col-xl-3 col-lg-4 col-md-6">
                         <div class="card bg-black my-5 mx-3 border-warning-subtle" >
                         <img src="media/background.jpg" class="card-img-top" alt="..." >
                         <div class="card-body">
@@ -101,7 +127,7 @@
                         </div>
                     </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="p-0 col-xl-3 col-lg-4 col-md-6">
                         <div class="card bg-black my-5 mx-3 border-warning-subtle" >
                         <img src="media/background.jpg" class="card-img-top" alt="..." >
                         <div class="card-body">
@@ -120,7 +146,7 @@
                         </div>
                     </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="p-0 col-xl-3 col-lg-4 col-md-6">
                         <div class="card bg-black my-5 mx-3 border-warning-subtle" >
                         <img src="media/background.jpg" class="card-img-top" alt="..." >
                         <div class="card-body">
@@ -139,7 +165,7 @@
                         </div>
                     </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="p-0 col-xl-3 col-lg-4 col-md-6">
                         <div class="card bg-black my-5 mx-3 border-warning-subtle" >
                         <img src="media/background.jpg" class="card-img-top" alt="..." >
                         <div class="card-body">
@@ -158,7 +184,7 @@
                         </div>
                     </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
+                    <div class="p-0 col-xl-3 col-lg-4 col-md-6">
                         <div class="card bg-black my-5 mx-3 border-warning-subtle" >
                         <img src="media/background.jpg" class="card-img-top" alt="..." >
                         <div class="card-body">
@@ -177,39 +203,15 @@
                         </div>
                     </div>
                     </div>
-                    <div class="col-lg-4 col-md-6">
-                        <div class="card bg-black my-5 mx-3 border-warning-subtle" >
-                        <img src="media/background.jpg" class="card-img-top" alt="..." >
-                        <div class="card-body">
-                            <div class="card-info d-flex justify-content-between m-2 text-white">
-                                <h5 class="card-title">Id. Card Title</h5>
-                                <h5 class="card-title">... Kč</h5>
-                            </div>
-                            <div class="quantityDiv d-flex justify-content-between m-2 flex-wrap ">
-                                <div class="input-group w-50 text-white">
-                                    <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
-                                </div>
-                                <button class="btn btn-warning d-flex align-items-center">
-                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    </div>
-                    
-                    
-                      
                 </div>
             </div>
         </div>
-        
-        
     </main>
 
     <footer class="container-fluid bg-black text-white d-flex flex-column text-center p-2 border-top border-warning">
+        <!-- 3 info restaurant (hrs, addres, contact) -->
         <div class="d-flex justify-content-evenly flex-wrap my-2">
-            <!-- Need to add icon -->
-            <div class=" OpeningHours  mx-5 my-2 p-3">
+            <div class="OpeningHours mx-5 my-2 p-3">
                 <h3 class="mb-3">Opening hours</h3>
                 <p>
                     <img src="media/calendar.png" alt="" class="mx-1">
@@ -218,42 +220,31 @@
 
                 <p><img src="media/calendar (1).png" alt="" class="mx-1">11:00 – 21:00</p>
             </div>
-            <div class=" address  mx-5 my-2 p-3">
-                
+            <div class="address mx-5 my-2 p-3">
                 <h3 class="mb-3">Address</h3>
-                <p>
-                <img src="media/location.png" alt="" class="mx-1">
-
-                Budějovická 371 - Jesenice 252 42 </p>
-
+                <p><img src="media/location.png" alt="" class="mx-1">Budějovická 371 - Jesenice 252 42 </p>
             </div>
-            <div class=" contact  mx-5 my-2 p-3">
+            <div class="contact mx-5 my-2 p-3">
                 <h3 class="mb-3">Contact</h3>
-                
-
                 <p><img src="media/telephone.png" alt="" class="mx-1">+420 774 688 688 </p>
-                
-
                 <p><img src="media/telephone.png" alt="" class="mx-1">+420 776 866 988</p>
-               
-
                 <p> <img src="media/mail.png" alt="" class="mx-1">shibasushi21@gmail.com</p>
             </div>
         </div>
-        
+        <!-- google map embedded -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1664.0893765303474!2d14.516317549564803!3d49.96679467075129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b8f5a0dfd7e13%3A0x25ea1859119c5674!2sShiba%20Sushi%20Restaurace!5e0!3m2!1svi!2scz!4v1681400258023!5m2!1svi!2scz" 
         style="height: 28rem; border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
-
-        <div class="containerContactIcon m-2">
+        </iframe>
+        <!-- social media -->
+        <div class="containerContactIcon m-4">
             <a href="https://www.facebook.com/profile.php?id=100005155502657" class="m-2"><img class="contactIcon" src="media/facebook.png" alt="fb"></a>
             <a href="https://www.instagram.com/quynhtran183/" class="m-2"><img class="contactIcon" src="media/instagram.png" alt="ins"></a>
             <a href="https://github.com/QuynhTran182003" class="m-2"><img class="contactIcon" src="media/github.png" alt="git"></a>
         </div>
-
+        <!-- author of web -->
         <p class="m-0">Copyright 2023 © Quynh Tran</p>
-
     </footer>
+
     <script>
         $(document).ready(function(){
             //need to load MENU from api (not created)
@@ -269,12 +260,10 @@
                 }, 
                 click: function(){
                     $(this).addClass("text-warning");
+                    alert(`You clicked on ${this.id}` );
+
                 }  
             });
-
-            $(".list-group-item").click(function(){
-                alert(`You clicked on ${this.id}` );
-            })
         })
     </script>
 </body>
