@@ -1,0 +1,59 @@
+{
+  "Sheet1": [
+    {
+      "Id": 213,
+      "Product": "Losos Maki",
+      "Price": 149,
+      "Description": "Klasicka rolka zabalena morskym listem",
+      "Category": "Maki"
+    },
+    {
+      "Id": 103,
+      "Product": "Losos Nigiri",
+      "Price": 69,
+      "Description": "kousek ryze pokryty platci ryby",
+      "Category": "Nigiri"
+    },
+    {
+      "Id": 501,
+      "Product": "Losos Roll",
+      "Price": 199,
+      "Description": "rokla s obalem ryzi",
+      "Category": "Ura Maki"
+    },
+    {
+      "Id": 609,
+      "Product": "Shiba Roll",
+      "Price": 399,
+      "Description": "grilovany uhor, atd..",
+      "Category": "Special Ura Maki"
+    },
+    {
+      "Id": 707,
+      "Product": "Kachni Futo",
+      "Price": 399,
+      "Description": "s kachnou",
+      "Category": "Futo"
+    },
+    {
+      "Id": 801,
+      "Product": "Losos Sashimi",
+      "Price": 349,
+      "Category": "Sashimi"
+    },
+    {
+      "Id": 904,
+      "Product": "Menu 1",
+      "Price": 699,
+      "Description": "sth",
+      "Category": "Menu"
+    },
+    {
+      "Id": 905,
+      "Product": "Menu 2",
+      "Price": 1399,
+      "Description": "sth",
+      "Category": "Menu"
+    }
+  ]
+}
