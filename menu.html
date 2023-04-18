@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="bg-black border-bottom border-warning shadow">
+    <header class="bg-black shadow">
         <div class="containerHeader p-2 align-items-center justify-content-evenly" >
             <!-- 1.part selection -->
             <ul class="nav d-flex align-items-center">
@@ -37,7 +37,7 @@
             <!-- 2.part selection -->
             <ul class="nav d-flex align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="#"><p class="h5">Gallery</p></a>
+                    <a class="nav-link text-white" href="gallery.html"><p class="h5">Gallery</p></a>
                 </li>
                 <span class="dividerVertical text-white"></span>
                 <li class="nav-item">
@@ -66,10 +66,10 @@
         </div>
     </header>
 
-    <main class="bg-black d-flex p-0">
+    <main class="bg-black d-flex p-0 border-top border-warning">
         <div class="row m-0">
             <!-- navigation -->
-            <nav class="col-sm-2 m-sm-5 p-0 ">
+            <nav class="col-sm-2 m-sm-5 p-0">
                 <!-- title navigation -->
                 <h5 class="p-3 text-center text-black bg-warning rounded">Category</h5>
                 <!-- list of category -->
@@ -89,123 +89,54 @@
                 <!-- row -->
                 <div class="row m-0 d-flex flex-wrap myCardContainer">
                     <!-- columns -->
-                    <div class="p-0 col-xl-3 col-lg-4 col-md-6 ">
-                        <!-- card item -->
+                    <div class="p-0 col-xl-3 col-lg-4 col-md-6">
                         <div class="card bg-black my-5 mx-3 border-warning-subtle" >
+                            
                             <img src="media/background.jpg" class="card-img-top" alt="..." >
                             <div class="card-body">
-                                <div class="card-info d-flex justify-content-between m-2 text-white">
-                                    <h5 class="card-title">Id. Card Title</h5>
-                                    <h5 class="card-title">... Kč</h5>
-                                </div>
-                                <div class="quantityDiv d-flex justify-content-between m-2 flex-wrap ">
-                                    <div class="input-group w-50 text-white">
-                                        <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
-                                    </div>
-                                    <button class="btn btn-warning d-flex align-items-center">
-                                        <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
+                                <div class="card-info d-flex justify-content-between text-white">
+                                    <h6 class="card-title m-0">Id. Card Title</h6>
+                                    <h6 class="card-title m-0">... Kč</h6>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="p-0 col-xl-3 col-lg-4 col-md-6">
-                        <div class="card bg-black my-5 mx-3 border-warning-subtle" >
-                        <img src="media/background.jpg" class="card-img-top" alt="..." >
-                        <div class="card-body">
-                            <div class="card-info d-flex justify-content-between m-2 text-white">
-                                <h5 class="card-title">Id. Card Title</h5>
-                                <h5 class="card-title">... Kč</h5>
-                            </div>
-                            <div class="quantityDiv d-flex justify-content-between m-2 flex-wrap ">
-                                <div class="input-group w-50 text-white">
-                                    <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
-                                </div>
-                                <button class="btn btn-warning d-flex align-items-center">
-                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
+                            <div class="card-footer d-flex justify-content-center">
+                                <button class="btn btn-warning d-flex align-items-center btnAddToCart">
+                                    <img src="media/shopping-cart16.png" alt="">   
+                                    <span class="px-1">Add To Cart</span>
+                                </button>
                             </div>
                             
                         </div>
                     </div>
-                    </div>
-                    <div class="p-0 col-xl-3 col-lg-4 col-md-6">
-                        <div class="card bg-black my-5 mx-3 border-warning-subtle" >
-                        <img src="media/background.jpg" class="card-img-top" alt="..." >
-                        <div class="card-body">
-                            <div class="card-info d-flex justify-content-between m-2 text-white">
-                                <h5 class="card-title">Id. Card Title</h5>
-                                <h5 class="card-title">... Kč</h5>
-                            </div>
-                            <div class="quantityDiv d-flex justify-content-between m-2 flex-wrap ">
-                                <div class="input-group w-50 text-white">
-                                    <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
+
+                    <div class="p-0 col-xl-3 col-lg-4 col-md-6 ">
+                        <!-- card item -->
+                        <div class="card bg-black my-5 mx-3 border-warning-subtle" id="${items[i].id}" >
+                            <img src="media/background.jpg" class="card-img-top" alt="..." id="${items[i].id}">
+                            <div class="card-body" id=${items[i].id}>
+                                <div class="card-info d-flex justify-content-between text-white">
+                                    <h6 class="card-title m-0   ">asdfasdf</h6>
+                                    <h6 class="card-title m-0   ">$- Kč</h6>
                                 </div>
-                                <button class="btn btn-warning d-flex align-items-center">
-                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
+                                
                             </div>
-                            
+                            <div class="p-0 card-footer d-flex justify-content-center">
+                                <button class="m-2 btn btn-warning d-flex align-items-center btnAddToCart">
+                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add To Cart</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
-                    </div>
-                    <div class="p-0 col-xl-3 col-lg-4 col-md-6">
-                        <div class="card bg-black my-5 mx-3 border-warning-subtle" >
-                        <img src="media/background.jpg" class="card-img-top" alt="..." >
-                        <div class="card-body">
-                            <div class="card-info d-flex justify-content-between m-2 text-white">
-                                <h5 class="card-title">Id. Card Title</h5>
-                                <h5 class="card-title">... Kč</h5>
-                            </div>
-                            <div class="quantityDiv d-flex justify-content-between m-2 flex-wrap ">
-                                <div class="input-group w-50 text-white">
-                                    <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
-                                </div>
-                                <button class="btn btn-warning d-flex align-items-center">
-                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    </div>
-                    <div class="p-0 col-xl-3 col-lg-4 col-md-6">
-                        <div class="card bg-black my-5 mx-3 border-warning-subtle" >
-                        <img src="media/background.jpg" class="card-img-top" alt="..." >
-                        <div class="card-body">
-                            <div class="card-info d-flex justify-content-between m-2 text-white">
-                                <h5 class="card-title">Id. Card Title</h5>
-                                <h5 class="card-title">... Kč</h5>
-                            </div>
-                            <div class="quantityDiv d-flex justify-content-between m-2 flex-wrap ">
-                                <div class="input-group w-50 text-white">
-                                    <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
-                                </div>
-                                <button class="btn btn-warning d-flex align-items-center">
-                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    </div>
-                    <div class="p-0 col-xl-3 col-lg-4 col-md-6">
-                        <div class="card bg-black my-5 mx-3 border-warning-subtle" >
-                        <img src="media/background.jpg" class="card-img-top" alt="..." >
-                        <div class="card-body">
-                            <div class="card-info d-flex justify-content-between m-2 text-white">
-                                <h5 class="card-title">Id. Card Title</h5>
-                                <h5 class="card-title">... Kč</h5>
-                            </div>
-                            <div class="quantityDiv d-flex justify-content-between m-2 flex-wrap ">
-                                <div class="input-group w-50 text-white">
-                                    <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
-                                </div>
-                                <button class="btn btn-warning d-flex align-items-center">
-                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
-                            </div>
-                            
-                        </div>
-                        </div>
-                    </div>
+
+                    
+
                 </div>
             </div>
         </div>
+    <div class="myModalDiv">
+        
+    </div>
+
     </main>
 
     <footer class="container-fluid bg-black text-white d-flex flex-column text-center p-2 border-top border-warning">
@@ -245,71 +176,7 @@
         <p class="m-0">Copyright 2023 © Quynh Tran</p>
     </footer>
 
-    <script>
-        class Item{
-            constructor(id, productName, price, descb, category){
-                this.id = id;
-                this.productName = productName;
-                this.price = price;
-                this.descb = descb;
-                this.category = category;
-            }
-        }
-        let items = [];
-        function RenderItems(items){
-            for(let i = 0; i < items.length; i++){
-                var divCard = $(".myCardContainer").append(`
-                <div class="p-0 col-xl-3 col-lg-4 col-md-6 ">
-                    <!-- card item -->
-                    <div class="card bg-black my-5 mx-3 border-warning-subtle" >
-                        <img src="media/background.jpg" class="card-img-top" alt="..." >
-                        <div class="card-body">
-                            <div class="card-info d-flex justify-content-between m-2 text-white">
-                                <h6 class="card-title">${items[i].id}. ${items[i].productName}</h6>
-                                <h6 class="card-title">${items[i].price},- Kč</h6>
-                            </div>
-                            <div class="quantityDiv d-flex justify-content-between m-2 flex-wrap ">
-                                <div class="input-group w-50 text-white">
-                                    <input type="number" class="form-control bg-black text-white border border-dark" min="0" value="0">
-                                </div>
-                                <button class="btn btn-warning d-flex align-items-center">
-                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add</span></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                `);
-            }
-        }
-        $(document).ready(function(){
-            $.ajax({
-                type:"GET",
-                url:"http://localhost:3000/Sheet1",
-                success: function(data){
-                    for(let i = 0;i < data.length; i++){
-                        let item = new Item(data[i].Id, data[i].Product, data[i].Price, data[i].Description, data[i].Category);
-                        items.push(item);
-                        console.log(item);
-                    }
-                    RenderItems(items);
-                }
-            })
-            $(".list-group-item").on({
-                mouseenter: function(){
-                    $(this).removeClass("text-light");
-                    $(this).addClass("text-warning");
-                },  
-                mouseleave: function(){
-                    $(this).removeClass("text-warning");
-                    $(this).addClass("text-light");
-                }, 
-                click: function(){
-                    $(this).addClass("text-warning");
-                    alert(`You clicked on ${this.id}` );
+    <script src="scriptOrderPg.js"></script>
 
-                }  
-            });
-        })
-    </script>
 </body>
 </html>
