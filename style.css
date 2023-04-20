@@ -37,6 +37,18 @@ a{
     background: rgb(47, 46, 46);
     /* color: white; */
 }
+::-webkit-input-placeholder { /* Edge */
+    color: white;
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: white;
+  }
+  
+  ::placeholder {
+    color: white;
+  }
+
 
 @media (max-width: 991.99px) {
     .containerHeader{
