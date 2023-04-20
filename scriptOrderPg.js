@@ -45,7 +45,7 @@ $(document).ready(function(){
 
     $.ajax({
         type:"GET",
-        url:"http://localhost:3000/Sheet1",
+        url:"http://localhost:3000/Menu",
         success: function(data){
             for(let i = 0;i < data.length; i++){
                 let item = new Item(data[i].Id, data[i].Product, data[i].Price, data[i].Description, data[i].Category);
@@ -68,12 +68,12 @@ $(document).ready(function(){
                       });
                     let html = `
                     <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
-                            <div class="modal-content text-white bg-black shadow-lg">
+                        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg ">
+                            <div class="modal-content text-white bg-black shadow-lg ">
                                 <div class="modal-header">
                                     <button type="button" class="btn-close bg-white" data-bs-dismiss="modal" aria-label="Close"></button>
                                 </div>
-                                <div class="modal-body d-flex">
+                                <div class="modal-body d-flex flex-wrap justify-content-center">
                                     <img src="media/background.jpg" class="" alt="..." style="height:16rem">
                                     <div class="description px-3">
                                         <div class="category">

@@ -12,6 +12,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Dosis:wght@300&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -67,37 +70,80 @@
         </div>
     </header>
     <main class="bg-black text-white">
-        <div class="reservationForm">
-            <h2>Make a Resevertion</h2>
-            <form action="">
-                <div class="row mb-3 d-flex align-items-center">
-                    <label for="name" class="col-sm-1">Name</label>
-                    <div class="col-sm">
-                        <input class="form-control w-25" type="text" name="name" id="name" placeholder="Your name here" required>
+        <section><img src="media/backgroundContact.jpg" alt="" class="w-100 opacity-75"></section>
+        <!-- About reservation -->
+        <div class="reservation d-flex justify-content-evenly align-items-center">
+            <!-- additional info -->
+            <section class="w-50 p-5 text-center">
+                <p class="h4">Dear customers,</p>
+                <p class="h4">in order to avoid a long waiting time and the case of rejection due to a lot of orders at the same time, we recommend that you make a reservation or call at least 2-3 hours in advance. This way we could better bring you the best quality of all dishes.</p><br>
+                <p class="h4">Thank you for your understanding and cooperation.</p><br>
+                <p class="h4">Your Shiba Team</p>
+            </section>
+            <!-- reservation form -->
+            <section class="reservationForm d-flex align-items-center flex-column">
+                <h1 class="p-4">Make a Resevertion</h1>
+                <form action="" class="border p-4 rounded border-light">
+                    <div class=" mb-3 d-flex align-items-center ">
+                        <label for="name" class="col-4">Name</label>
+                        <div class="col-8">
+                            <input class="text-white form-control bg-dark border border-dark" type="text" name="name" id="name" required>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="row mb-3 d-flex align-items-center">
-                    <label for="name">Last Name</label>
-                    <div class="col-sm">
-                        <input class="form-control w-25" type="text" name="lastName" id="lastName" placeholder="Your lastName here" required>
+                    
+                    <div class=" mb-3 d-flex align-items-center">
+                        <label for="name" class="col-4">Last Name</label>
+                        <div class="col-8">
+                            <input class="text-white form-control  bg-dark border border-dark" type="text" name="lastName" id="lastName" required>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="row mb-3 d-flex align-items-center">
-                    <label for="email" class="col-sm-2 col-form-label">Email</label>
-                    <div class="col-sm">
-                      <input type="text" class="form-control-plaintext" id="email" value="email@example.com">
+                    
+                    <div class=" mb-3 d-flex align-items-center ">
+                        <label for="email" class="col-4">Email</label>
+                        <div class="col-8">
+                        <input type="text" class="text-white form-control  bg-dark border border-dark" id="email" required>
+                        </div>
                     </div>
-                  </div>
-                <label for="name">Phone</label>
+                    <div class="mb-3 d-flex align-items-center ">
+                        <label for="name" class="col-4">Phone</label>
+                        <div class="col-8">
+                            <input class="text-white form-control  bg-dark border border-dark" type="tel" name="tel" id="tel" required>
+                        </div>
+                    </div>
+                    <div class="mb-3 d-flex align-items-center">
+                        <label for="name" class="col-4">Number of people</label>
+                        <div class="col-8">
+                            <select class="form-select bg-dark text-white border border-dark">
+                                <option selected>Select number of people</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="3">4</option>
+                                <option value="3">5</option>
+                                <option value="3">6</option>
+                                <option value="3">7</option>
+                                <option value="3">8</option>
+                                <option value="3">9</option>
+                                <option value="3">10+ (Please contact to us)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-3 d-flex align-items-center ">
+                        <label for="name" class="col-4">Date & Time</label>
+                        <div class="d-flex col-8">
+                            <input id="date" class="text-white form-control me-2 bg-dark text-white border border-dark " type="date" />
+                            <input id="time" class="text-white form-control bg-dark text-white border border-dark"  type="time" />
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="w-100 btn btn-warning py-2">Reserve</button>
 
-                <input class="form-control w-25" type="tel" name="tel" id="tel" placeholder="Your phone here" required>
-                
-            </form>
+                    </div>
+                </form>
+            </section>
         </div>
         <!-- 3 info restaurant (hrs, addres, contact) -->
-        <div class="d-flex justify-content-evenly flex-wrap ">
+        <div class="d-flex justify-content-evenly flex-wrap mt-5 border-top border-warning text-center">
             <div class="OpeningHours mx-5 my-2 p-3">
                 <h3 class="mb-3">Opening hours</h3>
                 <p>
@@ -119,11 +165,11 @@
             </div>
         </div>
     </main>
-    <footer class="container-fluid bg-black text-white d-flex flex-column text-center p-2 border-top border-warning">
+    <footer class="bg-black text-white d-flex flex-column text-center p-2">
         
         <!-- google map embedded -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1664.0893765303474!2d14.516317549564803!3d49.96679467075129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b8f5a0dfd7e13%3A0x25ea1859119c5674!2sShiba%20Sushi%20Restaurace!5e0!3m2!1svi!2scz!4v1681400258023!5m2!1svi!2scz" 
-        style="height: 28rem; border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        style="height: 28rem;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
         </iframe>
         <!-- social media -->
         <div class="containerContactIcon m-4">

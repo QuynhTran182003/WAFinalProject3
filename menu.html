@@ -12,10 +12,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="bg-black shadow">
+    <header class="bg-black">
         <div class="containerHeader p-2 align-items-center justify-content-evenly" >
             <!-- 1.part selection -->
             <ul class="nav d-flex align-items-center">
@@ -56,20 +61,20 @@
             <div class="dropdown position-absolute top-40 end-0 m-2 p-2">
                 <img src="media/menu.png" class="dropdown-toggle" alt="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
 
-                <ul class="dropdown-menu bg-dark rounded">
-                  <li><a class="dropdown-item text-white d-flex align-items-center" href="index.html"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a></li>
-                  <li><a class="dropdown-item text-white d-flex align-items-center" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><img src="media/menu24.png" alt=""><span class="mx-2">Menu</span></a></li>
-                  <li><a class="dropdown-item text-white d-flex align-items-center" href="#"><img src="media/gallery24.png" alt=""><span class="mx-2">Gallery</span></a></li>
-                  <li><a class="dropdown-item text-white d-flex align-items-center" href="contact.html"><img src="media/telephone.png" alt=""><span class="mx-2">Contact</span></a></li>
+                <ul class="dropdown-menu bg-dark rounded" style="z-index: 2;">
+                  <li><a class="dropdown-item text-white d-flex align-items-center" style="z-index: 2;" href="index.html"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a></li>
+                  <li><a class="dropdown-item text-white d-flex align-items-center" style="z-index: 2;" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><img src="media/menu24.png" alt=""><span class="mx-2">Menu</span></a></li>
+                  <li><a class="dropdown-item text-white d-flex align-items-center" style="z-index: 2;" href="#"><img src="media/gallery24.png" alt=""><span class="mx-2">Gallery</span></a></li>
+                  <li><a class="dropdown-item text-white d-flex align-items-center" style="z-index: 2;" href="contact.html"><img src="media/telephone.png" alt=""><span class="mx-2">Contact</span></a></li>
                 </ul>
             </div>
         </div>
     </header>
 
     <main class="bg-black d-flex p-0 border-top border-warning">
-        <div class="row m-0">
+        <div class="row m-0" style="z-index: 1;">
             <!-- navigation -->
-            <nav class="col-sm-2 m-sm-5 p-0">
+            <nav class="col-sm-3 col-md-3 col-lg-2 m-sm-5 p-0">
                 <!-- title navigation -->
                 <h5 class="p-3 text-center text-black bg-warning rounded">Category</h5>
                 <!-- list of category -->
@@ -91,7 +96,6 @@
                     <!-- columns -->
                     <div class="p-0 col-xl-3 col-lg-4 col-md-6">
                         <div class="card bg-black my-5 mx-3 border-warning-subtle" id="111" >
-                            
                             <img src="media/background.jpg" class="card-img-top" alt="..." id="111">
                             <div class="card-body" id="111">
                                 <div class="card-info d-flex justify-content-between text-white">
@@ -139,7 +143,7 @@
 
     </main>
 
-    <footer class="container-fluid bg-black text-white d-flex flex-column text-center p-2 border-top border-warning">
+    <footer class="bg-black text-white d-flex flex-column text-center p-2 border-top border-warning">
         <!-- 3 info restaurant (hrs, addres, contact) -->
         <div class="d-flex justify-content-evenly flex-wrap my-2">
             <div class="OpeningHours mx-5 my-2 p-3">
