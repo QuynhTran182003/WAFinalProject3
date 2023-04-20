@@ -108,6 +108,7 @@ $(document).ready(function(){
         }
     })
 
+
     $(".list-group-item").on({
         mouseenter: function(){
             $(this).removeClass("text-light");

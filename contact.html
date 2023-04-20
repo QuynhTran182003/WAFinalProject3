@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shiba Sushi - Menu / Order Online</title>
+    <title>Shiba Sushi - Contact</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
@@ -14,8 +14,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header class="bg-black shadow">
+    <header class="bg-black border-bottom border-warning shadow">
         <div class="containerHeader p-2 align-items-center justify-content-evenly" >
             <!-- 1.part selection -->
             <ul class="nav d-flex align-items-center">
@@ -59,89 +60,44 @@
                 <ul class="dropdown-menu bg-dark rounded">
                   <li><a class="dropdown-item text-white d-flex align-items-center" href="index.html"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a></li>
                   <li><a class="dropdown-item text-white d-flex align-items-center" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><img src="media/menu24.png" alt=""><span class="mx-2">Menu</span></a></li>
-                  <li><a class="dropdown-item text-white d-flex align-items-center" href="#"><img src="media/gallery24.png" alt=""><span class="mx-2">Gallery</span></a></li>
+                  <li><a class="dropdown-item text-white d-flex align-items-center" href="gallery.html"><img src="media/gallery24.png" alt=""><span class="mx-2">Gallery</span></a></li>
                   <li><a class="dropdown-item text-white d-flex align-items-center" href="contact.html"><img src="media/telephone.png" alt=""><span class="mx-2">Contact</span></a></li>
                 </ul>
             </div>
         </div>
     </header>
-
-    <main class="bg-black d-flex p-0 border-top border-warning">
-        <div class="row m-0">
-            <!-- navigation -->
-            <nav class="col-sm-2 m-sm-5 p-0">
-                <!-- title navigation -->
-                <h5 class="p-3 text-center text-black bg-warning rounded">Category</h5>
-                <!-- list of category -->
-                <ul class="list-group list-group-flush ">
-                    <li class="list-group-item bg-black text-light py-2" id="Nigiri">Nigiri</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Aburi Nigiri" type="button">Aburi Nigiri</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Maki" type="button">Maki</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Ura Maki" type="button">Ura Maki</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Special Ura Maki" type="button">Special Ura Maki</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Futo" type="button">Futo</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Sashimi" type="button">Sashimi</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Menu" type="button">Menu</li>
-                </ul>
-            </nav>
-            <!-- container items -->
-            <div class="col-sm container p-0">
-                <!-- row -->
-                <div class="row m-0 d-flex flex-wrap myCardContainer">
-                    <!-- columns -->
-                    <div class="p-0 col-xl-3 col-lg-4 col-md-6">
-                        <div class="card bg-black my-5 mx-3 border-warning-subtle" id="111" >
-                            
-                            <img src="media/background.jpg" class="card-img-top" alt="..." id="111">
-                            <div class="card-body" id="111">
-                                <div class="card-info d-flex justify-content-between text-white">
-                                    <h6 class="card-title m-0">111. Aburi Losos</h6>
-                                    <h6 class="card-title m-0">99 Kč</h6>
-                                </div>
-                            </div>
-                            <div class="card-footer d-flex justify-content-center">
-                                <button class="btn btn-warning d-flex align-items-center btnAddToCart">
-                                    <img src="media/shopping-cart16.png" alt="">   
-                                    <span class="px-1">Add To Cart</span>
-                                </button>
-                            </div>
-                            
-                        </div>
+    <main class="bg-black text-white">
+        <div class="reservationForm">
+            <h2>Make a Resevertion</h2>
+            <form action="">
+                <div class="row mb-3 d-flex align-items-center">
+                    <label for="name" class="col-sm-1">Name</label>
+                    <div class="col-sm">
+                        <input class="form-control w-25" type="text" name="name" id="name" placeholder="Your name here" required>
                     </div>
-
-                    <div class="p-0 col-xl-3 col-lg-4 col-md-6 ">
-                        <!-- card item -->
-                        <div class="card bg-black my-5 mx-3 border-warning-subtle" id="${items[i].id}" >
-                            <img src="media/background.jpg" class="card-img-top" alt="..." id="${items[i].id}">
-                            <div class="card-body" id=${items[i].id}>
-                                <div class="card-info d-flex justify-content-between text-white">
-                                    <h6 class="card-title m-0   ">asdfasdf</h6>
-                                    <h6 class="card-title m-0   ">$- Kč</h6>
-                                </div>
-                                
-                            </div>
-                            <div class="p-0 card-footer d-flex justify-content-center">
-                                <button class="m-2 btn btn-warning d-flex align-items-center btnAddToCart">
-                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add To Cart</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-
                 </div>
-            </div>
+                
+                <div class="row mb-3 d-flex align-items-center">
+                    <label for="name">Last Name</label>
+                    <div class="col-sm">
+                        <input class="form-control w-25" type="text" name="lastName" id="lastName" placeholder="Your lastName here" required>
+                    </div>
+                </div>
+                
+                <div class="row mb-3 d-flex align-items-center">
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm">
+                      <input type="text" class="form-control-plaintext" id="email" value="email@example.com">
+                    </div>
+                  </div>
+                <label for="name">Phone</label>
+
+                <input class="form-control w-25" type="tel" name="tel" id="tel" placeholder="Your phone here" required>
+                
+            </form>
         </div>
-    <div class="myModalDiv">
-        
-    </div>
-
-    </main>
-
-    <footer class="container-fluid bg-black text-white d-flex flex-column text-center p-2 border-top border-warning">
         <!-- 3 info restaurant (hrs, addres, contact) -->
-        <div class="d-flex justify-content-evenly flex-wrap my-2">
+        <div class="d-flex justify-content-evenly flex-wrap ">
             <div class="OpeningHours mx-5 my-2 p-3">
                 <h3 class="mb-3">Opening hours</h3>
                 <p>
@@ -162,6 +118,9 @@
                 <p> <img src="media/mail.png" alt="" class="mx-1">shibasushi21@gmail.com</p>
             </div>
         </div>
+    </main>
+    <footer class="container-fluid bg-black text-white d-flex flex-column text-center p-2 border-top border-warning">
+        
         <!-- google map embedded -->
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1664.0893765303474!2d14.516317549564803!3d49.96679467075129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b8f5a0dfd7e13%3A0x25ea1859119c5674!2sShiba%20Sushi%20Restaurace!5e0!3m2!1svi!2scz!4v1681400258023!5m2!1svi!2scz" 
         style="height: 28rem; border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
@@ -175,8 +134,6 @@
         <!-- author of web -->
         <p class="m-0">Copyright 2023 © Quynh Tran</p>
     </footer>
-
-    <script src="scriptOrderPg.js"></script>
-
+    <script src="scriptContact.js"></script>
 </body>
 </html>
