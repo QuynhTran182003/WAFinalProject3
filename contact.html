@@ -19,6 +19,18 @@
 </head>
 
 <body>
+    <div class="bg-black text-white offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+          <h5 id="offcanvasRightLabel">Menu</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body p-0">
+          <a class="sidebar-item d-flex align-items-center p-3 rounded" href="index.html"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a>
+          <a class="sidebar-item d-flex align-items-center p-3" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><img src="media/menu24.png" alt=""><span class="mx-2">Menu</span></a>
+          <a class="sidebar-item d-flex align-items-center p-3" href="gallery.html"><img src="media/gallery24.png" alt=""><span class="mx-2">Gallery</span></a>
+          <a class="sidebar-item d-flex align-items-center p-3" href="contact.html"><img src="media/telephone.png" alt=""><span class="mx-2">Contact</span></a>
+        </div>
+    </div>
     <header class="bg-black border-bottom border-warning shadow">
         <div class="containerHeader p-2 align-items-center justify-content-evenly" >
             <!-- 1.part selection -->
@@ -56,17 +68,9 @@
                     <img src="media\logo.png" alt=""  width="75" height="75">
                 </h2>
             </a>
-            <!-- dropdown list -->
-            <div class="dropdown position-absolute top-40 end-0 m-2 p-2">
+            <button class="bg-black position-absolute top-40 end-0 m-2 p-2 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <img src="media/menu.png" class="dropdown-toggle" alt="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-
-                <ul class="dropdown-menu bg-dark rounded">
-                  <li><a class="dropdown-item text-white d-flex align-items-center" href="index.html"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a></li>
-                  <li><a class="dropdown-item text-white d-flex align-items-center" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><img src="media/menu24.png" alt=""><span class="mx-2">Menu</span></a></li>
-                  <li><a class="dropdown-item text-white d-flex align-items-center" href="gallery.html"><img src="media/gallery24.png" alt=""><span class="mx-2">Gallery</span></a></li>
-                  <li><a class="dropdown-item text-white d-flex align-items-center" href="contact.html"><img src="media/telephone.png" alt=""><span class="mx-2">Contact</span></a></li>
-                </ul>
-            </div>
+            </button>
         </div>
     </header>
     <main class="bg-black text-white">

@@ -122,6 +122,14 @@ $(document).ready(function(){
             $(this).addClass("text-warning");
             alert(`You clicked on ${this.id}` );
         }  
+    }),
+    $(".sidebar-item").on({
+        mouseenter: function(){
+            $(this).addClass('bg-dark');
+        },
+        mouseleave: function(){
+            $(this).removeClass('bg-dark');
+        }
     })
 
     

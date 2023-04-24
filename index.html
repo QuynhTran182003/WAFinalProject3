@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shiba Sushi</title>
-   
+    <title>Shiba - Login</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 
@@ -16,116 +15,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
 </head>
 <body>
-    <header class="bg-transparent fixed-top" >
-        <div class="containerHeader p-2 align-items-center justify-content-evenly" >
-            <!-- 1.part selection -->
-            <ul class="nav d-flex align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#"><p class="h5">Home</p></a>
-                </li>
-                <span class="dividerVertical text-white"></span>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><p class="h5">Menu</p></a>
-                </li>
-            </ul>
-            <!-- logo and brand -->
-            <h2 class="title">
-                <a href="#" class="text-decoration-none text-white d-flex align-items-center">
-                    <img src="media\logo.png" alt=""  width="80" height="80">Shiba Sushi
-                </a>
-            </h2>
-            <!-- 2.part selection -->
-            <ul class="nav d-flex align-items-center">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="gallery.html"><p class="h5">Gallery</p></a>
-                </li>
-                <span class="dividerVertical text-white"></span>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="contact.html"><p class="h5">Contact</p></a>
-                </li>
-            </ul>
+    <main class="bg-black d-flex align-items-center">
+        <div class="w-50">
+            <img src="media/bgLoginForm.jpg " class="w-100 vh-100" style="background-size: contain; background-position: center;" alt="">
         </div>
-        <div class="containerCollapsed justify-content-center align-items-center p-1" >
-            <!-- logo -->
-            <a href="#" class="text-decoration-none ">
-                <h2 class="title ">
-                    <img src="media\logo.png" alt=""  width="75" height="75">
-                </h2>
-            </a>
-            <!-- dropdown list -->
-            <div class="dropdown position-absolute top-40 end-0 m-2 p-2">
-                <img src="media/menu.png" class="dropdown-toggle" alt="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <ul class="dropdown-menu bg-dark rounded">
-                  <li><a class="dropdown-item text-white d-flex align-items-center" href="#"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a></li>
-                  <li><a class="dropdown-item text-white d-flex align-items-center" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><img src="media/menu24.png" alt=""><span class="mx-2">Menu</span></a></li>
-                  <li><a class="dropdown-item text-white d-flex align-items-center" href="gallery.html"><img src="media/gallery24.png" alt=""><span class="mx-2">Gallery</span></a></li>
-                  <li><a class="dropdown-item text-white d-flex align-items-center" href="contact.html"><img src="media/telephone.png" alt=""><span class="mx-2">Contact</span></a></li>
-                </ul>
-            </div>
-        </div>
-    </header>
-    
-    <main>
-        <div class="container-fluid p-0 sticky-top ">
-            <!-- background -->
-            <div class="bg-image">
-                <!-- mask of bg -->
-                <div class="mask" style="background-color: rgba(0, 0, 0, 0.5);">
-                    <!-- content -->
-                    <div class="d-flex flex-column justify-content-center align-items-center vh-100" id="welcome">
-                        <h3 class="text-warning m-3 ">Welcome to Shiba Sushi</h3>
-                        <a href="menu.html" type="button"class="btn btn-lg btn-outline-warning">Order Online</a>
-                    </div>
-                </div>
+        <div class="w-50 d-flex justify-content-center align-items-center">
+            <div class="w-50 loginForm border rounded p-5 text-center text-white shadow">
+                <h3 class="mb-3">Login</h3>
+                <form action="intro.html" method="post" class="d-flex flex-column">
+                    <input class="my-2 p-2 bg-black border border-2 border-dark text-white rounded" type="text" name="username" id="username" placeholder="Your email here" required>
+                    <input class="my-2 p-2 bg-black border border-2 border-dark text-white rounded" type="password" name="password" id="password" placeholder="Enter password" required>
+                    <button class="my-3 py-2 btn btn-primary" type="submit">Login</button>
+                </form>
             </div>
         </div>
     </main>
-
-    <footer class="bg-black text-white d-flex flex-column text-center p-2">
-        <!-- info restaurant -->
-        <div class="d-flex justify-content-evenly flex-wrap my-2">
-            <!-- opening hrs -->
-            <div class=" OpeningHours  mx-5 my-2 p-3">
-                <h3 class="mb-3">Opening hours</h3>
-                <p><img src="media/calendar.png" alt="" class="mx-1">Pondělí – Neděle</p>
-                <p><img src="media/calendar (1).png" alt="" class="mx-1">11:00 – 21:00</p>
-            </div>
-            <!-- address -->
-            <div class="address mx-5 my-2 p-3">
-                <h3 class="mb-3">Address</h3>
-                <p><img src="media/location.png" alt="" class="mx-1">Budějovická 371 - Jesenice 252 42</p>
-            </div>
-            <!-- contact -->
-            <div class="contact mx-5 my-2 p-3">
-                <h3 class="mb-3">Contact</h3>
-                
-
-                <p><img src="media/telephone.png" alt="" class="mx-1">+420 774 688 688 </p>
-                
-
-                <p><img src="media/telephone.png" alt="" class="mx-1">+420 776 866 988</p>
-               
-
-                <p> <img src="media/mail.png" alt="" class="mx-1">shibasushi21@gmail.com</p>
-            </div>
-        </div>
-        <!-- google map embedded -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1664.0893765303474!2d14.516317549564803!3d49.96679467075129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b8f5a0dfd7e13%3A0x25ea1859119c5674!2sShiba%20Sushi%20Restaurace!5e0!3m2!1svi!2scz!4v1681400258023!5m2!1svi!2scz" 
-        style="height: 28rem; border:0;" allowfullscreen="true" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-        <!-- social media -->
-        <div class="containerContactIcon m-4">
-            <a href="https://www.facebook.com/profile.php?id=100005155502657" class="m-2"><img class="contactIcon" src="media/facebook.png" alt="fb"></a>
-            <a href="https://www.instagram.com/quynhtran183/" class="m-2"><img class="contactIcon" src="media/instagram.png" alt="ins"></a>
-            <a href="https://github.com/QuynhTran182003" class="m-2"><img class="contactIcon" src="media/github.png" alt="git"></a>
-        </div>
-        <!-- author -->
-        <p class="m-0">Copyright 2023 © Quynh Tran</p>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>

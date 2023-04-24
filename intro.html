@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shiba Sushi - Menu / Order Online</title>
-
+    <title>Shiba Sushi</title>
+   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
     <div class="bg-black text-white offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -32,12 +31,12 @@
           <a class="sidebar-item d-flex align-items-center p-3" href="contact.html"><img src="media/telephone.png" alt=""><span class="mx-2">Contact</span></a>
         </div>
       </div>
-    <header class="bg-black">
+    <header class="bg-transparent fixed-top" >
         <div class="containerHeader p-2 align-items-center justify-content-evenly" >
             <!-- 1.part selection -->
             <ul class="nav d-flex align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="index.html"><p class="h5">Home</p></a>
+                    <a class="nav-link text-white" href="#"><p class="h5">Home</p></a>
                 </li>
                 <span class="dividerVertical text-white"></span>
                 <li class="nav-item">
@@ -46,9 +45,8 @@
             </ul>
             <!-- logo and brand -->
             <h2 class="title">
-                <a href="index.html" class="text-decoration-none text-white d-flex align-items-center">
-                    <img src="media\logo.png" alt=""  width="80" height="80">
-                    Shiba Sushi
+                <a href="#" class="text-decoration-none text-white d-flex align-items-center">
+                    <img src="media\logo.png" alt=""  width="80" height="80">Shiba Sushi
                 </a>
             </h2>
             <!-- 2.part selection -->
@@ -64,109 +62,58 @@
         </div>
         <div class="containerCollapsed justify-content-center align-items-center p-1" >
             <!-- logo -->
-            <a href="index.html" class="text-decoration-none ">
+            <a href="#" class="text-decoration-none ">
                 <h2 class="title ">
                     <img src="media\logo.png" alt=""  width="75" height="75">
                 </h2>
             </a>
-            <button class="bg-black position-absolute top-40 end-0 m-2 p-2 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+            <button class="bg-transparent position-absolute top-40 end-0 m-2 p-2 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
                 <img src="media/menu.png" class="dropdown-toggle" alt="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             </button>
         </div>
     </header>
-
-    <main class="bg-black d-flex p-0 border-top border-warning">
-        <div class="row m-0" style="z-index: 1;">
-            <!-- navigation -->
-            <nav class="col-sm-3 col-md-3 col-lg-2 m-sm-5 p-0">
-                <!-- title navigation -->
-                <h5 class="p-3 text-center text-black bg-warning rounded">Category</h5>
-                <!-- list of category -->
-                <ul class="list-group list-group-flush ">
-                    <li class="list-group-item bg-black text-light py-2" id="Nigiri">Nigiri</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Aburi Nigiri" type="button">Aburi Nigiri</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Maki" type="button">Maki</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Ura Maki" type="button">Ura Maki</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Special Ura Maki" type="button">Special Ura Maki</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Futo" type="button">Futo</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Sashimi" type="button">Sashimi</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Menu" type="button">Menu</li>
-                </ul>
-            </nav>
-            <!-- container items -->
-            <div class="col-sm container p-0">
-                <!-- row -->
-                <div class="row m-0 d-flex flex-wrap myCardContainer">
-                    <!-- columns -->
-                    <div class="p-0 col-xl-3 col-lg-4 col-md-6">
-                        <div class="card bg-black my-5 mx-3 border-warning-subtle" id="111" >
-                            <img src="media/background.jpg" class="card-img-top" alt="..." id="111">
-                            <div class="card-body" id="111">
-                                <div class="card-info d-flex justify-content-between text-white">
-                                    <h6 class="card-title m-0">111. Aburi Losos</h6>
-                                    <h6 class="card-title m-0">99 Kč</h6>
-                                </div>
-                            </div>
-                            <div class="card-footer d-flex justify-content-center">
-                                <button class="btn btn-warning d-flex align-items-center btnAddToCart">
-                                    <img src="media/shopping-cart16.png" alt="">   
-                                    <span class="px-1">Add To Cart</span>
-                                </button>
-                            </div>
-                            
-                        </div>
+    
+    <main>
+        <div class="container-fluid p-0 sticky-top ">
+            <!-- background -->
+            <div class="bg-image">
+                <!-- mask of bg -->
+                <div class="mask" style="background-color: rgba(0, 0, 0, 0.5);">
+                    <!-- content -->
+                    <div class="d-flex flex-column justify-content-center align-items-center vh-100" id="welcome">
+                        <h3 class="text-warning m-3 ">Welcome to Shiba Sushi</h3>
+                        <a href="menu.html" type="button"class="btn btn-lg btn-outline-warning">Order Online</a>
                     </div>
-
-                    <div class="p-0 col-xl-3 col-lg-4 col-md-6 ">
-                        <!-- card item -->
-                        <div class="card bg-black my-5 mx-3 border-warning-subtle" id="${items[i].id}" >
-                            <img src="media/background.jpg" class="card-img-top" alt="..." id="${items[i].id}">
-                            <div class="card-body" id=${items[i].id}>
-                                <div class="card-info d-flex justify-content-between text-white">
-                                    <h6 class="card-title m-0   ">asdfasdf</h6>
-                                    <h6 class="card-title m-0   ">$- Kč</h6>
-                                </div>
-                                
-                            </div>
-                            <div class="p-0 card-footer d-flex justify-content-center">
-                                <button class="m-2 btn btn-warning d-flex align-items-center btnAddToCart">
-                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add To Cart</span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    
-
                 </div>
             </div>
         </div>
-    <div class="myModalDiv">
-        
-    </div>
-
     </main>
 
-    <footer class="bg-black text-white d-flex flex-column text-center p-2 border-top border-warning">
-        <!-- 3 info restaurant (hrs, addres, contact) -->
+    <footer class="bg-black text-white d-flex flex-column text-center p-2">
+        <!-- info restaurant -->
         <div class="d-flex justify-content-evenly flex-wrap my-2">
-            <div class="OpeningHours mx-5 my-2 p-3">
+            <!-- opening hrs -->
+            <div class=" OpeningHours  mx-5 my-2 p-3">
                 <h3 class="mb-3">Opening hours</h3>
-                <p>
-                    <img src="media/calendar.png" alt="" class="mx-1">
-                    Pondělí – Neděle </p>
-                    
-
+                <p><img src="media/calendar.png" alt="" class="mx-1">Pondělí – Neděle</p>
                 <p><img src="media/calendar (1).png" alt="" class="mx-1">11:00 – 21:00</p>
             </div>
+            <!-- address -->
             <div class="address mx-5 my-2 p-3">
                 <h3 class="mb-3">Address</h3>
-                <p><img src="media/location.png" alt="" class="mx-1">Budějovická 371 - Jesenice 252 42 </p>
+                <p><img src="media/location.png" alt="" class="mx-1">Budějovická 371 - Jesenice 252 42</p>
             </div>
+            <!-- contact -->
             <div class="contact mx-5 my-2 p-3">
                 <h3 class="mb-3">Contact</h3>
+                
+
                 <p><img src="media/telephone.png" alt="" class="mx-1">+420 774 688 688 </p>
+                
+
                 <p><img src="media/telephone.png" alt="" class="mx-1">+420 776 866 988</p>
+               
+
                 <p> <img src="media/mail.png" alt="" class="mx-1">shibasushi21@gmail.com</p>
             </div>
         </div>
@@ -180,11 +127,10 @@
             <a href="https://www.instagram.com/quynhtran183/" class="m-2"><img class="contactIcon" src="media/instagram.png" alt="ins"></a>
             <a href="https://github.com/QuynhTran182003" class="m-2"><img class="contactIcon" src="media/github.png" alt="git"></a>
         </div>
-        <!-- author of web -->
+        <!-- author -->
         <p class="m-0">Copyright 2023 © Quynh Tran</p>
     </footer>
 
-    <script src="scriptOrderPg.js"></script>
-
+    <script src="script.js"></script>
 </body>
 </html>

@@ -3,4 +3,16 @@ $(document).ready(function(){
     $(".containerHeader, .containerCollapsed").addClass(`animated fadeInDown`);
     $("#carouselExampleIndicators").addClass('animated fadeInRight');
     $("footer").addClass('animated fadeInUp');
+    $(".offcanvas").click(function(){
+        $(this).addClass('animated fadeInRight');
+
+    });
+    $(".sidebar-item").on({
+        mouseenter: function(){
+            $(this).addClass('bg-dark');
+        },
+        mouseleave: function(){
+            $(this).removeClass('bg-dark');
+        }
+    })
 })
