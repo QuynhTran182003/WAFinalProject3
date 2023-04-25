@@ -63,7 +63,7 @@ function ShowSuccessMsg(id, quantity){
     let msgDiv;
     if(quantity > 1){
         msgDiv = `<div class="msgDiv alert alert-success mx-3 mt-3">
-        <strong>Success! ${quantity} x product no. ${id} has been added to your cart</strong> .
+        <strong>Success! ${quantity} x products no. ${id} has been added to your cart</strong> .
         </div>`;
     } else if(quantity == 1){
         msgDiv = `<div class="msgDiv alert alert-success mx-3 mt-3">
@@ -99,6 +99,8 @@ $(document).ready(function(){
                 ShowSuccessMsg(this.id, 1);
                 let item = new Item(product, 1);
                 myCart.AddToCart(item);
+            localStorage.setItem("myCart", JSON.stringify(myCart.cartItems));
+
             }),
             $(".card-body, .card-img-top").on({
                 mouseenter: function(){
@@ -128,8 +130,8 @@ $(document).ready(function(){
                                         </div>
 
                                         <div class="quantityDiv d-flex">
-                                            <input type="number" class="form-control w-25 bg-black text-white border border-dark" id="inputQuantity" placeholder="Quan."  min="0" value="0">
-                                            <button class="btn btn-warning d-flex align-items-center mx-3" id="btnAddInModal">
+                                            <input type="number" class="form-control w-25 bg-black text-white border border-dark" id="inputQuantity" placeholder="Quan."  min="1" value="1">
+                                            <button class="btn btn-warning d-flex align-items-center mx-3 btnAddToCart" id="btnAddInModal">
                                                 <img src="media/shopping-cart16.png" alt="">   
                                                 <span class="px-1">Add</span>
                                             </button>
@@ -152,14 +154,11 @@ $(document).ready(function(){
                     $('#inputQuantity').on("change", () => {subtotal(product.price)});
                     
                     $("#btnAddInModal").click(function(){
-                        if($('#inputQuantity').val()<=0){
-                            return;
-                        }else{
-                            //todo
-                            ShowSuccessMsg(product.id, $('#inputQuantity').val());
-                            let item = new Item(product, $('#inputQuantity').val());
-                            myCart.AddToCart(item);
-                        }
+                        ShowSuccessMsg(product.id, $('#inputQuantity').val());
+                        let item = new Item(product, $('#inputQuantity').val());
+                        myCart.AddToCart(item);
+            localStorage.setItem("myCart", JSON.stringify(myCart.cartItems));
+
                     })
                 }
                 
