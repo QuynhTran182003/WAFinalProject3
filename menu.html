@@ -26,18 +26,19 @@
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body p-0">
-          <a class="sidebar-item d-flex align-items-center p-3 rounded" href="index.html"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a>
+          <a class="sidebar-item d-flex align-items-center p-3 rounded" href="myOrder.html"><img src="media/bag24.png" alt=""><span class="mx-2">My Order</span></a>
+          <a class="sidebar-item d-flex align-items-center p-3 rounded" href="intro.html"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a>
           <a class="sidebar-item d-flex align-items-center p-3" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><img src="media/menu24.png" alt=""><span class="mx-2">Menu</span></a>
           <a class="sidebar-item d-flex align-items-center p-3" href="gallery.html"><img src="media/gallery24.png" alt=""><span class="mx-2">Gallery</span></a>
           <a class="sidebar-item d-flex align-items-center p-3" href="contact.html"><img src="media/telephone.png" alt=""><span class="mx-2">Contact</span></a>
         </div>
-      </div>
+    </div>
     <header class="bg-black">
         <div class="containerHeader p-2 align-items-center justify-content-evenly" >
             <!-- 1.part selection -->
             <ul class="nav d-flex align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="index.html"><p class="h5">Home</p></a>
+                    <a class="nav-link text-white" href="intro.html"><p class="h5">Home</p></a>
                 </li>
                 <span class="dividerVertical text-white"></span>
                 <li class="nav-item">
@@ -46,7 +47,7 @@
             </ul>
             <!-- logo and brand -->
             <h2 class="title">
-                <a href="index.html" class="text-decoration-none text-white d-flex align-items-center">
+                <a href="intro.html" class="text-decoration-none text-white d-flex align-items-center">
                     <img src="media\logo.png" alt=""  width="80" height="80">
                     Shiba Sushi
                 </a>
@@ -61,10 +62,13 @@
                     <a class="nav-link text-white" href="contact.html"><p class="h5">Contact</p></a>
                 </li>
             </ul>
+            <button class="bg-black position-absolute top-40 end-0 m-2 p-2 border-0" type="button">
+                <a href="myOrder.html"><img src="media/bag32.png" alt=""></a>
+            </button>
         </div>
         <div class="containerCollapsed justify-content-center align-items-center p-1" >
             <!-- logo -->
-            <a href="index.html" class="text-decoration-none ">
+            <a href="intro.html" class="text-decoration-none ">
                 <h2 class="title ">
                     <img src="media\logo.png" alt=""  width="75" height="75">
                 </h2>
@@ -73,74 +77,78 @@
                 <img src="media/menu.png" class="dropdown-toggle" alt="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             </button>
         </div>
+
     </header>
 
-    <main class="bg-black d-flex p-0 border-top border-warning">
-        <div class="row m-0" style="z-index: 1;">
-            <!-- navigation -->
-            <nav class="col-sm-3 col-md-3 col-lg-2 m-sm-5 p-0">
-                <!-- title navigation -->
-                <h5 class="p-3 text-center text-black bg-warning rounded">Category</h5>
-                <!-- list of category -->
-                <ul class="list-group list-group-flush ">
-                    <li class="list-group-item bg-black text-light py-2" id="Nigiri">Nigiri</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Aburi Nigiri" type="button">Aburi Nigiri</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Maki" type="button">Maki</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Ura Maki" type="button">Ura Maki</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Special Ura Maki" type="button">Special Ura Maki</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Futo" type="button">Futo</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Sashimi" type="button">Sashimi</li>
-                    <li class="list-group-item bg-black text-light py-2" id="Menu" type="button">Menu</li>
-                </ul>
-            </nav>
-            <!-- container items -->
-            <div class="col-sm container p-0">
-                <!-- row -->
-                <div class="row m-0 d-flex flex-wrap myCardContainer">
-                    <!-- columns -->
-                    <div class="p-0 col-xl-3 col-lg-4 col-md-6">
-                        <div class="card bg-black my-5 mx-3 border-warning-subtle" id="111" >
-                            <img src="media/background.jpg" class="card-img-top" alt="..." id="111">
-                            <div class="card-body" id="111">
-                                <div class="card-info d-flex justify-content-between text-white">
-                                    <h6 class="card-title m-0">111. Aburi Losos</h6>
-                                    <h6 class="card-title m-0">99 Kč</h6>
+    <main class="bg-black p-0 border-top border-warning">
+        <div class="d-flex">
+            <div class="row m-0">
+                <!-- navigation -->
+                <nav class="col-sm-3 col-md-3 col-lg-2 m-sm-5 p-0">
+                    <!-- title navigation -->
+                    <h5 class="p-3 text-center text-black bg-warning rounded">Category</h5>
+                    <!-- list of category -->
+                    <ul class="list-group list-group-flush ">
+                        <li class="list-group-item bg-black text-light py-2" id="Nigiri">Nigiri</li>
+                        <li class="list-group-item bg-black text-light py-2" id="Aburi Nigiri" type="button">Aburi Nigiri</li>
+                        <li class="list-group-item bg-black text-light py-2" id="Maki" type="button">Maki</li>
+                        <li class="list-group-item bg-black text-light py-2" id="Ura Maki" type="button">Ura Maki</li>
+                        <li class="list-group-item bg-black text-light py-2" id="Special Ura Maki" type="button">Special Ura Maki</li>
+                        <li class="list-group-item bg-black text-light py-2" id="Futo" type="button">Futo</li>
+                        <li class="list-group-item bg-black text-light py-2" id="Sashimi" type="button">Sashimi</li>
+                        <li class="list-group-item bg-black text-light py-2" id="Menu" type="button">Menu</li>
+                    </ul>
+                </nav>
+                <!-- container items -->
+                <div class="col-sm container p-0">
+                    <!-- row -->
+                    <div class="row m-0 d-flex flex-wrap myCardContainer">
+                        <!-- columns -->
+                        <div class="p-0 col-xl-3 col-lg-4 col-md-6">
+                            <div class="card bg-black my-5 mx-3 border-warning-subtle" id="111" >
+                                <img src="media/background.jpg" class="card-img-top" alt="..." id="111">
+                                <div class="card-body" id="111">
+                                    <div class="card-info d-flex justify-content-between text-white">
+                                        <h6 class="card-title m-0">111. Aburi Losos</h6>
+                                        <h6 class="card-title m-0">99 Kč</h6>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="card-footer d-flex justify-content-center">
-                                <button class="btn btn-warning d-flex align-items-center btnAddToCart">
-                                    <img src="media/shopping-cart16.png" alt="">   
-                                    <span class="px-1">Add To Cart</span>
-                                </button>
-                            </div>
-                            
-                        </div>
-                    </div>
-
-                    <div class="p-0 col-xl-3 col-lg-4 col-md-6 ">
-                        <!-- card item -->
-                        <div class="card bg-black my-5 mx-3 border-warning-subtle" id="${items[i].id}" >
-                            <img src="media/background.jpg" class="card-img-top" alt="..." id="${items[i].id}">
-                            <div class="card-body" id=${items[i].id}>
-                                <div class="card-info d-flex justify-content-between text-white">
-                                    <h6 class="card-title m-0   ">asdfasdf</h6>
-                                    <h6 class="card-title m-0   ">$- Kč</h6>
+                                <div class="card-footer d-flex justify-content-center">
+                                    <button class="btn btn-warning d-flex align-items-center btnAddToCart">
+                                        <img src="media/shopping-cart16.png" alt="">   
+                                        <span class="px-1">Add To Cart</span>
+                                    </button>
                                 </div>
                                 
                             </div>
-                            <div class="p-0 card-footer d-flex justify-content-center">
-                                <button class="m-2 btn btn-warning d-flex align-items-center btnAddToCart">
-                                    <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add To Cart</span>
-                                </button>
+                        </div>
+    
+                        <div class="p-0 col-xl-3 col-lg-4 col-md-6 ">
+                            <!-- card item -->
+                            <div class="card bg-black my-5 mx-3 border-warning-subtle" id="${items[i].id}" >
+                                <img src="media/background.jpg" class="card-img-top" alt="..." id="${items[i].id}">
+                                <div class="card-body" id=${items[i].id}>
+                                    <div class="card-info d-flex justify-content-between text-white">
+                                        <h6 class="card-title m-0   ">asdfasdf</h6>
+                                        <h6 class="card-title m-0   ">$- Kč</h6>
+                                    </div>
+                                    
+                                </div>
+                                <div class="p-0 card-footer d-flex justify-content-center">
+                                    <button class="m-2 btn btn-warning d-flex align-items-center btnAddToCart">
+                                        <img src="media/shopping-cart16.png" alt="">   <span class="px-1">Add To Cart</span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
+    
+                        
+    
                     </div>
-
-                    
-
                 </div>
             </div>
         </div>
+        
     <div class="myModalDiv">
         
     </div>
