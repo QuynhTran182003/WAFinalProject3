@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,11 +29,11 @@
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body p-0">
-          <a class="sidebar-item d-flex align-items-center p-3 rounded" href="myOrder.html"><img src="media/bag24.png" alt=""><span class="mx-2">My Order</span></a>
-          <a class="sidebar-item d-flex align-items-center p-3 rounded" href="intro.html"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a>
+          <a class="sidebar-item d-flex align-items-center p-3 rounded" href="myOrder.php"><img src="media/bag24.png" alt=""><span class="mx-2">My Order</span></a>
+          <a class="sidebar-item d-flex align-items-center p-3 rounded" href="index.php"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a>
           <a class="sidebar-item d-flex align-items-center p-3" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><img src="media/menu24.png" alt=""><span class="mx-2">Menu</span></a>
-          <a class="sidebar-item d-flex align-items-center p-3" href="gallery.html"><img src="media/gallery24.png" alt=""><span class="mx-2">Gallery</span></a>
-          <a class="sidebar-item d-flex align-items-center p-3" href="contact.html"><img src="media/telephone.png" alt=""><span class="mx-2">Contact</span></a>
+          <a class="sidebar-item d-flex align-items-center p-3" href="gallery.php"><img src="media/gallery24.png" alt=""><span class="mx-2">Gallery</span></a>
+          <a class="sidebar-item d-flex align-items-center p-3" href="contact.php"><img src="media/telephone.png" alt=""><span class="mx-2">Contact</span></a>
         </div>
     </div>
     <header class="bg-black">
@@ -38,7 +41,7 @@
             <!-- 1.part selection -->
             <ul class="nav d-flex align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="intro.html"><p class="h5">Home</p></a>
+                    <a class="nav-link text-white" href="index.php"><p class="h5">Home</p></a>
                 </li>
                 <span class="dividerVertical text-white"></span>
                 <li class="nav-item">
@@ -47,7 +50,7 @@
             </ul>
             <!-- logo and brand -->
             <h2 class="title">
-                <a href="intro.html" class="text-decoration-none text-white d-flex align-items-center">
+                <a href="index.php" class="text-decoration-none text-white d-flex align-items-center">
                     <img src="media\logo.png" alt=""  width="80" height="80">
                     Shiba Sushi
                 </a>
@@ -55,20 +58,29 @@
             <!-- 2.part selection -->
             <ul class="nav d-flex align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="gallery.html"><p class="h5">Gallery</p></a>
+                    <a class="nav-link text-white" href="gallery.php"><p class="h5">Gallery</p></a>
                 </li>
                 <span class="dividerVertical text-white"></span>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="contact.html"><p class="h5">Contact</p></a>
+                    <a class="nav-link text-white" href="contact.php"><p class="h5">Contact</p></a>
                 </li>
             </ul>
-            <button class="bg-black position-absolute top-40 end-0 m-2 p-2 border-0" type="button">
-                <a href="myOrder.html"><img src="media/bag32.png" alt=""></a>
-            </button>
+            <?php 
+            if(isset($_SESSION['username'])){
+                echo '<button class="bg-black position-absolute top-40 end-0 m-2 p-2 border-0" type="button">
+                <a href="myOrder.php"><img src="media/bag32.png" alt=""></a>
+                </button>';
+            } else{
+                echo '<button class="bg-black position-absolute top-40 end-0 m-2 p-2 border-0" type="button">
+               Login
+                </button>';
+            }
+            ?>
+            
         </div>
         <div class="containerCollapsed justify-content-center align-items-center p-1" >
             <!-- logo -->
-            <a href="intro.html" class="text-decoration-none ">
+            <a href="index.php" class="text-decoration-none ">
                 <h2 class="title ">
                     <img src="media\logo.png" alt=""  width="75" height="75">
                 </h2>
@@ -104,7 +116,7 @@
                     <!-- row -->
                     <div class="row m-0 myCardContainer">
                         <!-- columns -->
-                        <div class="p-0 col-xl-3 col-lg-4 col-md-6">
+                        <!-- <div class="p-0 col-xl-3 col-lg-4 col-md-6">
                             <div class="card bg-black my-5 mx-3 border-warning-subtle" id="111" >
                                 <img src="media/background.jpg" class="card-img-top" alt="..." id="111">
                                 <div class="card-body" id="111">
@@ -124,7 +136,6 @@
                         </div>
     
                         <div class="p-0 col-xl-3 col-lg-4 col-md-6 ">
-                            <!-- card item -->
                             <div class="card bg-black my-5 mx-3 border-warning-subtle" id="${items[i].id}" >
                                 <img src="media/background.jpg" class="card-img-top" alt="..." id="${items[i].id}">
                                 <div class="card-body" id=${items[i].id}>
@@ -140,7 +151,7 @@
                                     </button>
                                 </div>
                             </div>
-                        </div>
+                        </div> --> 
     
                         
     
