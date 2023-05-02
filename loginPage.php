@@ -33,7 +33,6 @@
                     <div class="inputbox my-3 border-bottom border-2">
                         <input type="text" name="username" class=" w-75 bg-transparent h5 border-0" style="outline:none;" placeholder="Username"required>
                         <img src="media\mail.png" alt="">
-
                     </div>
                     <div class="inputbox my-3 border-bottom border-2">
                         <input type="password" name="password" class="w-75 bg-transparent h5 border-0" style="outline: none;" placeholder="Password"required>

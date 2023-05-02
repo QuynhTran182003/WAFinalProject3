@@ -1,3 +1,6 @@
+<?php
+session_start()
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,48 +21,79 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="bg-black text-white offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-    <div class="offcanvas-header">
-      <h5 id="offcanvasRightLabel">Menu</h5>
-      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="bg-black text-white offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header d-flex align-items-center">
+            <?php
+                if(isset($_SESSION['username'])){
+                    echo '
+                    <h5 class="mb-0 offcanvasRightLabel d-flex align-items-center">
+                        <img src="media\profile.png" alt="" class="me-2">
+                        <span>', $_SESSION['username'] ,'</span>
+                    </h5>';
+                }
+            ?>
+            <?php
+                if(isset($_SESSION['username'])){
+                    echo ' 
+                    <a href="logout.php" class="h5 mb-0 d-flex align-items-center position-relative py-2 border-0" >
+                        <img src="media\logout.png" alt="" class="m-1">
+                        <span class="" id="logOutOpt">Log out</span>
+                    </a>
+                    ';
+                } else{
+                    echo '
+                    <a href="login.php" class="h5 mb-0 d-flex align-items-centerposition-relative py-2 border-0" >
+                        <img src="media\login.png" alt="" class="m-1">
+                        <span class="logInOpt" id="logInOpt">Log in</span>
+                    </a>
+                    ';
+                }
+            ?>
+        </div>
+        <div class="offcanvas-body p-0">
+          <a class="sidebar-item d-flex align-items-center p-3 rounded" href="index.php"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a>
+          <?php
+            if(isset($_SESSION['username'])){
+                echo ' 
+                <a class="sidebar-item d-flex align-items-center p-3 rounded" href="myOrder.php"><img src="media/shopping-bag.png" alt=""><span class="mx-2">My Order</span></a>
+                ';
+            }
+          ?>
+          <a class="sidebar-item d-flex align-items-center p-3" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><img src="media/menu24.png" alt=""><span class="mx-2">Menu</span></a>
+          <a class="sidebar-item d-flex align-items-center p-3" href="gallery.php"><img src="media/gallery24.png" alt=""><span class="mx-2">Gallery</span></a>
+          <a class="sidebar-item d-flex align-items-center p-3" href="contact.php"><img src="media/telephone.png" alt=""><span class="mx-2">Contact</span></a>
+        </div>
     </div>
-    <div class="offcanvas-body p-0">
-      <a class="sidebar-item d-flex align-items-center p-3 rounded" href="index.php"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a>
-      <a class="sidebar-item d-flex align-items-center p-3" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><img src="media/menu24.png" alt=""><span class="mx-2">Menu</span></a>
-      <a class="sidebar-item d-flex align-items-center p-3" href="gallery.php"><img src="media/gallery24.png" alt=""><span class="mx-2">Gallery</span></a>
-      <a class="sidebar-item d-flex align-items-center p-3" href="contact.php"><img src="media/telephone.png" alt=""><span class="mx-2">Contact</span></a>
-    </div>
-  </div>
-    <header class="bg-black border-bottom border-warning shadow">
+    <header class="bg-black" >
         <div class="containerHeader p-2 align-items-center justify-content-evenly" >
             <!-- 1.part selection -->
             <ul class="nav d-flex align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="index.php"><p class="h5">Home</p></a>
+                    <a class="nav-link text-white" href="index.php"><p class="h4">Home</p></a>
                 </li>
                 <span class="dividerVertical text-white"></span>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><p class="h5">Menu</p></a>
+                    <a class="nav-link text-white" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><p class="h4">Menu</p></a>
                 </li>
             </ul>
             <!-- logo and brand -->
             <h2 class="title">
-                <a href="index.php" class="text-decoration-none text-white d-flex align-items-center">
-                    <img src="media\logo.png" alt=""  width="80" height="80">
-                    Shiba Sushi
+                <a href="#" class="text-decoration-none text-white d-flex align-items-center">
+                    <img src="media\logo.png" alt=""  width="90" height="90"><span class="h1">Shiba Sushi</span> 
                 </a>
             </h2>
             <!-- 2.part selection -->
             <ul class="nav d-flex align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="gallery.php"><p class="h5">Gallery</p></a>
+                    <a class="nav-link text-white" href="gallery.php"><p class="h4">Gallery</p></a>
                 </li>
                 <span class="dividerVertical text-white"></span>
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="contact.php"><p class="h5">Contact</p></a>
+                    <a class="nav-link text-white" href="contact.php"><p class="h4">Contact</p></a>
                 </li>
             </ul>
         </div>
+        
         <div class="containerCollapsed justify-content-center align-items-center p-1" >
             <!-- logo -->
             <a href="index.php" class="text-decoration-none ">
@@ -67,11 +101,9 @@
                     <img src="media\logo.png" alt=""  width="75" height="75">
                 </h2>
             </a>
-            
-            <button class="bg-black position-absolute top-40 end-0 m-2 p-2 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
-              <img src="media/menu.png" class="dropdown-toggle" alt="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <button class="bg-transparent position-absolute top-40 end-0 m-2 p-2 border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                <img src="media/menu.png" class="dropdown-toggle" alt="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             </button>
-            
         </div>
     </header>
     
@@ -150,6 +182,8 @@
         <!-- author of web -->
         <p class="m-0">Copyright 2023 © Quynh Tran</p>
     </footer>
-    <script src="scriptGalle.js"></script>
+
+    <script src="scripts\scriptGalle.js"></script>
+
 </body>
 </html>

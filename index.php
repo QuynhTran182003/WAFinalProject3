@@ -23,17 +23,48 @@
 </head>
 <body>
     <div class="bg-black text-white offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-          <h5 id="offcanvasRightLabel">Menu</h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        <div class="offcanvas-header d-flex align-items-center">
+            <?php
+                if(isset($_SESSION['username'])){
+                    echo '
+                    <h5 class="mb-0 offcanvasRightLabel d-flex align-items-center">
+                        <img src="media\profile.png" alt="" class="me-2">
+                        <span>', $_SESSION['username'] ,'</span>
+                    </h5>';
+                }
+            ?>
+            <?php
+                if(isset($_SESSION['username'])){
+                    echo ' 
+                    <a href="logout.php" class="h5 mb-0 d-flex align-items-center position-relative py-2 border-0" >
+                        <img src="media\logout.png" alt="" class="m-1">
+                        <span class="" id="logOutOpt">Log out</span>
+                    </a>
+                    ';
+                } else{
+                    echo '
+                    <a href="login.php" class="h5 mb-0 d-flex align-items-centerposition-relative py-2 border-0" >
+                        <img src="media\login.png" alt="" class="m-1">
+                        <span class="logInOpt" id="logInOpt">Log in</span>
+                    </a>
+                    ';
+                }
+            ?>
         </div>
         <div class="offcanvas-body p-0">
-          <a class="sidebar-item d-flex align-items-center p-3 rounded" href="intro.php"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a>
+          <a class="sidebar-item d-flex align-items-center p-3 rounded" href="index.php"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a>
+          <?php
+            if(isset($_SESSION['username'])){
+                echo ' 
+                <a class="sidebar-item d-flex align-items-center p-3 rounded" href="myOrder.php"><img src="media/shopping-bag.png" alt=""><span class="mx-2">My Order</span></a>
+                ';
+            }
+          ?>
           <a class="sidebar-item d-flex align-items-center p-3" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><img src="media/menu24.png" alt=""><span class="mx-2">Menu</span></a>
           <a class="sidebar-item d-flex align-items-center p-3" href="gallery.php"><img src="media/gallery24.png" alt=""><span class="mx-2">Gallery</span></a>
           <a class="sidebar-item d-flex align-items-center p-3" href="contact.php"><img src="media/telephone.png" alt=""><span class="mx-2">Contact</span></a>
         </div>
-      </div>
+    </div>
     <header class="bg-transparent fixed-top" >
         <div class="containerHeader p-2 align-items-center justify-content-evenly" >
             <!-- 1.part selection -->
@@ -62,25 +93,22 @@
                     <a class="nav-link text-white" href="contact.php"><p class="h4">Contact</p></a>
                 </li>
             </ul>
-            
-           
-            </a>
-            <?php
-            if(isset($_SESSION['username'])){
-                
-                echo ' 
-                <div class="position-absolute top-40 end-0 m-2 p-2 border-0">
-                    <a href="logout.php" class="position-relative  m-2 p-2 border-0" ><p class="h5">Log out</p></a>
-                    </div>
-                ';
-            } else{
-                echo ' <a href="loginPage.php" class="position-absolute top-40 end-0 m-2 p-2 border-0" >
-                <p class="h5">Log in</p>';
 
-            }
-            ?>
+            <?php
+         if(isset($_SESSION['username'])){
+            echo ' 
+            <a href="logout.php" class="bg-transparent position-absolute top-40 end-0 m-2 p-2 border-0" type="button">
+                <img src="media\logout.png" alt="" class="m-1">
+                <span class="h5" id="logOutOpt">Log out</span>
+            </a>
+
             
+            ';
+        }
+        
+        ?>
         </div>
+        
         <div class="containerCollapsed justify-content-center align-items-center p-1" >
             <!-- logo -->
             <a href="intro.php" class="text-decoration-none ">
@@ -92,6 +120,8 @@
                 <img src="media/menu.png" class="dropdown-toggle" alt="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             </button>
         </div>
+
+              
     </header>
     
     <main>
@@ -101,7 +131,8 @@
                 <!-- mask of bg -->
                 <div class="mask" style="background-color: rgba(0, 0, 0, 0.5);">
                     <!-- content -->
-                    <div class="d-flex flex-column justify-content-center align-items-center vh-100" id="welcome">
+                    <div class="content vh-100 d-flex flex-column justify-content-center align-items-center">
+                    <div class=" " id="welcome">
                         <h3 class="text-warning m-3 ">Welcome to the world of Sushi<?php
                             if(isset($_SESSION['username']))
                                 echo ', ', $_SESSION['username'], '!';
@@ -110,8 +141,27 @@
                                 }
                             ?>
                         </h3>
-                        <a href="menu.php" type="button"class="btn btn-lg btn-outline-warning">Order Online</a>
+
+                        <div class="d-flex justify-content-evenly">
+                            <?php
+                                if(isset($_SESSION['username']))
+                                    echo '
+                                            <a href="menu.php" type="button"class="btn btn-lg btn-outline-warning">Order Online</a>
+                                    ';
+                                    else{
+                                        echo '
+                                            <a href="login.php" type="button"class="btn btn-lg btn-outline-warning">Sign in</a>
+                                            <a href="login.php" type="button"class="btn btn-lg btn-outline-warning">Sign up</a>
+                                        
+                                        ';
+
+                                    }
+                            ?>
+                        </div>
+                        
                     </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
@@ -159,6 +209,6 @@
         <p class="m-0">Copyright 2023 © Quynh Tran</p>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="scripts\script.js"></script>
 </body>
 </html>

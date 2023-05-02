@@ -10,5 +10,14 @@ $(document).ready(function(){
         mouseleave: function(){
             $(this).removeClass('bg-dark');
         }
+    }),
+
+    $("#logOutOpt, .logInOpt").on({
+        mouseenter: function(){
+            $(this).addClass('text-warning');
+        },
+        mouseleave: function(){
+            $(this).removeClass('text-warning');
+        }
     })
 });

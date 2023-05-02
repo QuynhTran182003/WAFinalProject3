@@ -1,3 +1,6 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,20 +22,50 @@
 
 </head>
 <body>
-    <div class="bg-black text-white offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-          <h5 id="offcanvasRightLabel">Menu</h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<div class="bg-black text-white offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header d-flex align-items-center">
+            <?php
+                if(isset($_SESSION['username'])){
+                    echo '
+                    <h5 class="mb-0 offcanvasRightLabel d-flex align-items-center">
+                        <img src="media\profile.png" alt="" class="me-2">
+                        <span>', $_SESSION['username'] ,'</span>
+                    </h5>';
+                }
+            ?>
+            <?php
+                if(isset($_SESSION['username'])){
+                    echo ' 
+                    <a href="logout.php" class="h5 mb-0 d-flex align-items-center position-relative py-2 border-0" >
+                        <img src="media\logout.png" alt="" class="m-1">
+                        <span class="" id="logOutOpt">Log out</span>
+                    </a>
+                    ';
+                } else{
+                    echo '
+                    <a href="login.php" class="h5 mb-0 d-flex align-items-centerposition-relative py-2 border-0" >
+                        <img src="media\login.png" alt="" class="m-1">
+                        <span class="logInOpt" id="logInOpt">Log in</span>
+                    </a>
+                    ';
+                }
+            ?>
         </div>
         <div class="offcanvas-body p-0">
-          <a class="sidebar-item d-flex align-items-center p-3 rounded" href="myOrder.php"><img src="media/bag24.png" alt=""><span class="mx-2">My Order</span></a>
           <a class="sidebar-item d-flex align-items-center p-3 rounded" href="index.php"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a>
+          <?php
+            if(isset($_SESSION['username'])){
+                echo ' 
+                <a class="sidebar-item d-flex align-items-center p-3 rounded" href="myOrder.php"><img src="media/shopping-bag.png" alt=""><span class="mx-2">My Order</span></a>
+                ';
+            }
+          ?>
           <a class="sidebar-item d-flex align-items-center p-3" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><img src="media/menu24.png" alt=""><span class="mx-2">Menu</span></a>
           <a class="sidebar-item d-flex align-items-center p-3" href="gallery.php"><img src="media/gallery24.png" alt=""><span class="mx-2">Gallery</span></a>
           <a class="sidebar-item d-flex align-items-center p-3" href="contact.php"><img src="media/telephone.png" alt=""><span class="mx-2">Contact</span></a>
         </div>
-      </div>
-    <header class="bg-black">
+    </div>
+    <header class="bg-black border-bottom border-warning">
         <div class="containerHeader p-2 align-items-center justify-content-evenly" >
             <!-- 1.part selection -->
             <ul class="nav d-flex align-items-center">
@@ -76,17 +109,17 @@
                 <img src="media/menu.png" class="dropdown-toggle" alt="" type="button" data-bs-toggle="dropdown" aria-expanded="false">
             </button>
         </div>
-
+        
     </header>
-    <main class="bg-black p-0 border-top border-warning">
-        <div class="content p-2">
+    <main class="bg-black text-white py-3 border-top border-warning d-flex flex-wrap container-fluid">
+        <div class="content px-4 py-3 col-md-8 container-fluid border-end">
             <table class="table text-white">
                 <thead>
                     <tr>
                       <th scope="col-6">Product</th>
                       <th scope="col-4">Price</th>
                       <th scope="col-1">Quantity</th>
-                      <th scope="col-1">Subtotal</th>
+                      <th scope="col-1 " class="text-end">Subtotal</th>
                     </tr>
                   </thead>
                   <tbody class="table-group-divider">
@@ -103,10 +136,20 @@
                   </tbody>
             </table>
         </div>
+        <div class="infoOrder px-4 py-3 col-md-4 container-fluid">
+            <section>
+                <h5 class="border-bottom p-2 fw-bold">Total in payment</h5>
+                <div class="p-2  border-bottom" id="subtotal">
+                    <div id="subtotalRow" class="d-flex justify-content-between">
+                        <span>Subtotal</span>
+                    </div>
+            </section>
+        </div>
     </main>
 
     <script>
         function RenderItems(itemArr){
+            let total = 0;
             for(let i = 0; i < itemArr.length; i++){
                 console.log(itemArr[i]);
                 let id = itemArr[i].product.id;
@@ -114,26 +157,29 @@
                 let price = itemArr[i].product.price;
                 let quantity = itemArr[i].quantity;
                 let subtotal = price*quantity;
-                let html = `<tr>
+                let html = `<tr class="orderItems">
                       <th scope="row">
                         <button class="btn btn-danger btn-sm m-1 border-0 px-2 btnDelItem" id="${id}">X</button>
                         <span>${id}. ${name}</span>
                         </th>
                       <td>${price},- Kč</td>
-                      <td class="w-25"><input type="number" name="Quantity" id="input" class="w-25 px-2 bg-dark text-white border border-dark rounded " value="${quantity}"></td>
-                      <td>${subtotal},- Kč</td>
+                      <td class="w-25"><input type="number" name="Quantity" id="input" class="w-50 px-2 bg-dark text-white border border-dark rounded" value="${quantity}" min="1"></td>
+                      <td class="text-end">${subtotal},- Kč</td>
                     </tr>`;
-                $("tbody").append(html)
+                $("tbody").append(html);
+                total += subtotal;
             }
-        }
+            let html = `<span>${total},- Kč</span>`;
+            $("#subtotalRow").append(html);
 
-        const str = localStorage.getItem("myCart");
+        }
+        const str = sessionStorage.getItem("myCart");
         // convert string to valid object
         const parsedArr = JSON.parse(str);
 
 
         RenderItems(parsedArr);
-        $("tbody tr").on({
+        $(".orderItems").on({
             mouseenter: function(){
                 $(this).removeClass("text-white");
                 $(this).addClass("text-warning");

@@ -23,14 +23,44 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="bg-black text-white offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
-        <div class="offcanvas-header">
-          <h5 id="offcanvasRightLabel">Menu</h5>
-          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+<div class="bg-black text-white offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header d-flex align-items-center">
+            <?php
+                if(isset($_SESSION['username'])){
+                    echo '
+                    <h5 class="mb-0 offcanvasRightLabel d-flex align-items-center">
+                        <img src="media\profile.png" alt="" class="me-2">
+                        <span>', $_SESSION['username'] ,'</span>
+                    </h5>';
+                }
+            ?>
+            <?php
+                if(isset($_SESSION['username'])){
+                    echo ' 
+                    <a href="logout.php" class="h5 mb-0 d-flex align-items-center position-relative py-2 border-0" >
+                        <img src="media\logout.png" alt="" class="m-1">
+                        <span class="" id="logOutOpt">Log out</span>
+                    </a>
+                    ';
+                } else{
+                    echo '
+                    <a href="login.php" class="h5 mb-0 d-flex align-items-centerposition-relative py-2 border-0" >
+                        <img src="media\login.png" alt="" class="m-1">
+                        <span class="logInOpt" id="logInOpt">Log in</span>
+                    </a>
+                    ';
+                }
+            ?>
         </div>
         <div class="offcanvas-body p-0">
-          <a class="sidebar-item d-flex align-items-center p-3 rounded" href="myOrder.php"><img src="media/bag24.png" alt=""><span class="mx-2">My Order</span></a>
           <a class="sidebar-item d-flex align-items-center p-3 rounded" href="index.php"><img src="media/home24.png" alt=""><span class="mx-2">Home</span></a>
+          <?php
+            if(isset($_SESSION['username'])){
+                echo ' 
+                <a class="sidebar-item d-flex align-items-center p-3 rounded" href="myOrder.php"><img src="media/shopping-bag.png" alt=""><span class="mx-2">My Order</span></a>
+                ';
+            }
+          ?>
           <a class="sidebar-item d-flex align-items-center p-3" href="https://shibasushi.cz/wp-content/uploads/2022/11/MENU-English.pdf"><img src="media/menu24.png" alt=""><span class="mx-2">Menu</span></a>
           <a class="sidebar-item d-flex align-items-center p-3" href="gallery.php"><img src="media/gallery24.png" alt=""><span class="mx-2">Gallery</span></a>
           <a class="sidebar-item d-flex align-items-center p-3" href="contact.php"><img src="media/telephone.png" alt=""><span class="mx-2">Contact</span></a>
@@ -203,7 +233,7 @@
         <p class="m-0">Copyright 2023 © Quynh Tran</p>
     </footer>
 
-    <script src="scriptOrderPg.js"></script>
+    <script src="scripts\scriptOrderPg.js"></script>
 
 </body>
 </html>

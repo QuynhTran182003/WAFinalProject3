@@ -99,7 +99,7 @@ $(document).ready(function(){
                 ShowSuccessMsg(this.id, 1);
                 let item = new Item(product, 1);
                 myCart.AddToCart(item);
-            localStorage.setItem("myCart", JSON.stringify(myCart.cartItems));
+            sessionStorage.setItem("myCart", JSON.stringify(myCart.cartItems));
 
             }),
             $(".card-body, .card-img-top").on({
@@ -157,7 +157,7 @@ $(document).ready(function(){
                         ShowSuccessMsg(product.id, $('#inputQuantity').val());
                         let item = new Item(product, $('#inputQuantity').val());
                         myCart.AddToCart(item);
-            localStorage.setItem("myCart", JSON.stringify(myCart.cartItems));
+            sessionStorage.setItem("myCart", JSON.stringify(myCart.cartItems));
 
                     })
                 }
