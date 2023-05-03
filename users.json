@@ -1,12 +1,13 @@
 {
-    "users": [
-      {
-        "username": "admin",
-        "password": "admin"
-      },
-      {
-        "username": "tran",
-        "password": "thq"
-      }
-    ]
-  }
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin"
+
+    },
+    {
+      "username": "tran",
+      "password": "thq"
+    }
+  ]
+}

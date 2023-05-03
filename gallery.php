@@ -183,7 +183,7 @@ session_start()
         <p class="m-0">Copyright 2023 © Quynh Tran</p>
     </footer>
 
-    <script src="scripts\scriptGalle.js"></script>
+    <script src="scriptGalle.js"></script>
 
 </body>
 </html>

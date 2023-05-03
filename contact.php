@@ -218,6 +218,6 @@
         <!-- author of web -->
         <p class="m-0">Copyright 2023 © Quynh Tran</p>
     </footer>
-    <script src="scripts\scriptContact.js"></script>
+    <script src="scriptContact.js"></script>
 </body>
 </html>

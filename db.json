@@ -1,59 +1,92 @@
 {
   "Menu": [
     {
-      "Id": 213,
-      "Product": "Losos Maki",
-      "Price": 149,
-      "Description": "Klasicka rolka zabalena morskym listem",
-      "Category": "Maki"
-    },
-    {
       "Id": 103,
       "Product": "Losos Nigiri",
       "Price": 69,
       "Description": "kousek ryze pokryty platci ryby",
-      "Category": "Nigiri"
+      "Category": "Nigiri",
+      "Image":"media\\Photo\\losos-nigiri.jpg"
+
     },
+    {
+      "Id": 104,
+      "Product": "Tuňák Nigiri",
+      "Price": 79,
+      "Description": "kousek rýže pokrytý plátcí ryby",
+      "Category": "Nigiri",
+      "Image":"media\\Photo\\tunak-nigiri.jpg"
+
+    },
+    {
+      "Id": 202,
+      "Product": "Avokado Maki",
+      "Price": 119,
+      "Description": "Klasicka rolka zabalena morskym listem",
+      "Category": "Maki",
+      "Image":"media\\Photo\\avo-maki.jpg"
+    },
+    {
+      "Id": 213,
+      "Product": "Losos Maki",
+      "Price": 149,
+      "Description": "Klasicka rolka zabalena morskym listem",
+      "Category": "Maki",
+      "Image":"media\\Photo\\losos-maki.jpg"
+    },
+    
     {
       "Id": 501,
       "Product": "Losos Roll",
       "Price": 199,
       "Description": "rokla s obalem ryzi",
-      "Category": "Ura Maki"
+      "Category": "Ura Maki",
+      "Image":"media\\Photo\\losos-roll.jpg"
+
     },
     {
       "Id": 609,
       "Product": "Shiba Roll",
       "Price": 399,
       "Description": "grilovany uhor, atd..",
-      "Category": "Special Ura Maki"
+      "Category": "Special Ura Maki",
+      "Image":"media\\Photo\\shiba-roll.jpg"
+
     },
     {
       "Id": 707,
       "Product": "Kachni Futo",
       "Price": 399,
       "Description": "s kachnou",
-      "Category": "Futo"
+      "Category": "Futo",
+      "Image":"media\\Photo\\kachni-futo.jpg"
+
     },
     {
       "Id": 801,
       "Product": "Losos Sashimi",
       "Price": 349,
-      "Category": "Sashimi"
+      "Category": "Sashimi",
+      "Image":"media\\Photo\\sashimi-losos.jpg"
+
     },
     {
       "Id": 904,
       "Product": "Menu 1",
       "Price": 699,
       "Description": "sth",
-      "Category": "Menu"
+      "Category": "Menu",
+      "Image":"media\\Photo\\menu-1.jpg"
+
     },
     {
       "Id": 905,
       "Product": "Menu 2",
       "Price": 1399,
       "Description": "sth",
-      "Category": "Menu"
+      "Category": "Menu",
+      "Image":"media\\Photo\\menu-2.jpg"
+
     }
   ]
 }

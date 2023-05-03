@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shiba - Login</title>
+    <title>Shiba - Registration</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
 
@@ -26,27 +26,37 @@
         "
     >
         <div class="form-box text-white w-50 rounded p-4" style="background-color: rgb(0,0,0,0.5);">
-            <div class="form-value d-flex justify-content-center align-items-center h5">
-                <form action="login.php" method="post">
+            <div class="form-value d-flex justify-content-center align-items-center">
+                <form action="registration.php" method="post">
                     <img src="media\logo.png" alt="" width="80" height="80">
-                    <h2 class=" text-center">Sign in</h2>
+                    <h2 class=" text-center">Register</h2>
+                    
                     <div class="inputbox my-3 border-bottom border-2">
                         <input type="text" name="username" class=" w-75 bg-transparent h5 border-0" style="outline:none;" placeholder="Username"required>
+                        <img src="media\profile.png" alt="">
+                    </div>
+                    <div class="inputbox my-3 border-bottom border-2">
+                        <input type="text" name="username" class=" w-75 bg-transparent h5 border-0" style="outline:none;" placeholder="Email"required>
                         <img src="media\mail.png" alt="">
                     </div>
                     <div class="inputbox my-3 border-bottom border-2">
-                        <input type="password" name="password" class="w-75 bg-transparent h5 border-0" style="outline: none;" placeholder="Password"required>
+                        <input id="password" type="password" name="password" class="w-75 bg-transparent h5 border-0" style="outline: none;" placeholder="Password"required>
                         <img src="media\lock.png" alt="">
-
+                    </div>
+                    <div class="inputbox my-3 border-bottom border-2">
+                        <input id="repeatPassword" type="password" name="repeatPassword" class="w-75 bg-transparent h5 border-0" style="outline: none;" placeholder="Repeat password"required>
+                        <img src="media\lock.png" alt="">
                     </div>
                     <!-- <div class="forget my-4 ">
                             <input type="checkbox"><span class="h5 m-2">Remember Me</span>
                             <a href="#"><span class="h5 m-2">Forget Password</span></a>
                     </div> -->
-                    <button class="btn btn-light rounded w-100 h5">Sign in</button>
-                    <div class="register">
-                        <p>Don't have a account? <a href="registerPage.php">Register</a></p>
-                    </div>
+                    <button class="btn btn-light rounded w-100">
+                    <span class="h6 fw-bold">
+Sign Up
+                    </span>    
+
+                    </button>
                 </form>
             
             </div>

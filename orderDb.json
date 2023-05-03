@@ -1,0 +1,22 @@
+{
+    "orders": [
+      {
+        "id": "1",
+        "username" : "tran",
+        "items": [
+            {
+                "productId" : "203",
+                "quantity" : "5"
+            },
+            {
+                "productId" : "103",
+                "quantity" : "5"
+            },
+            {
+                "productId" : "905",
+                "quantity" : "1"
+            }
+        ]
+      }
+    ]
+}

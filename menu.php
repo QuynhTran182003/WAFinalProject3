@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="bg-black text-white offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <div class="bg-black text-white offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header d-flex align-items-center">
             <?php
                 if(isset($_SESSION['username'])){
@@ -233,7 +233,7 @@
         <p class="m-0">Copyright 2023 © Quynh Tran</p>
     </footer>
 
-    <script src="scripts\scriptOrderPg.js"></script>
+    <script src="scriptOrderPg.js"></script>
 
 </body>
 </html>
