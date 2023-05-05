@@ -6,7 +6,7 @@
       "Price": 69,
       "Description": "kousek ryze pokryty platci ryby",
       "Category": "Nigiri",
-      "Image":"media\\Photo\\losos-nigiri.jpg"
+      "Image":"..\\media\\Photo\\losos-nigiri.jpg"
 
     },
     {
@@ -15,7 +15,7 @@
       "Price": 79,
       "Description": "kousek rýže pokrytý plátcí ryby",
       "Category": "Nigiri",
-      "Image":"media\\Photo\\tunak-nigiri.jpg"
+      "Image":"..\\media\\Photo\\tunak-nigiri.jpg"
 
     },
     {
@@ -24,7 +24,7 @@
       "Price": 119,
       "Description": "Klasicka rolka zabalena morskym listem",
       "Category": "Maki",
-      "Image":"media\\Photo\\avo-maki.jpg"
+      "Image":"..\\media\\Photo\\avo-maki.jpg"
     },
     {
       "Id": 213,
@@ -32,7 +32,7 @@
       "Price": 149,
       "Description": "Klasicka rolka zabalena morskym listem",
       "Category": "Maki",
-      "Image":"media\\Photo\\losos-maki.jpg"
+      "Image":"..\\media\\Photo\\losos-maki.jpg"
     },
     
     {
@@ -41,7 +41,7 @@
       "Price": 199,
       "Description": "rokla s obalem ryzi",
       "Category": "Ura Maki",
-      "Image":"media\\Photo\\losos-roll.jpg"
+      "Image":"..\\media\\Photo\\losos-roll.jpg"
 
     },
     {
@@ -50,7 +50,7 @@
       "Price": 399,
       "Description": "grilovany uhor, atd..",
       "Category": "Special Ura Maki",
-      "Image":"media\\Photo\\shiba-roll.jpg"
+      "Image":"..\\media\\Photo\\shiba-roll.jpg"
 
     },
     {
@@ -59,7 +59,7 @@
       "Price": 399,
       "Description": "s kachnou",
       "Category": "Futo",
-      "Image":"media\\Photo\\kachni-futo.jpg"
+      "Image":"..\\media\\Photo\\kachni-futo.jpg"
 
     },
     {
@@ -67,7 +67,7 @@
       "Product": "Losos Sashimi",
       "Price": 349,
       "Category": "Sashimi",
-      "Image":"media\\Photo\\sashimi-losos.jpg"
+      "Image":"..\\media\\Photo\\sashimi-losos.jpg"
 
     },
     {
@@ -76,7 +76,7 @@
       "Price": 699,
       "Description": "sth",
       "Category": "Menu",
-      "Image":"media\\Photo\\menu-1.jpg"
+      "Image":"..\\media\\Photo\\menu-1.jpg"
 
     },
     {
@@ -85,7 +85,7 @@
       "Price": 1399,
       "Description": "sth",
       "Category": "Menu",
-      "Image":"media\\Photo\\menu-2.jpg"
+      "Image":"..\\media\\Photo\\menu-2.jpg"
 
     }
   ]

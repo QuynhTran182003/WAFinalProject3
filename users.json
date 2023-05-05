@@ -1,13 +1,13 @@
-{
-  "users": [
-    {
-      "username": "admin",
-      "password": "admin"
+[
+  {
+    "username": "admin",
+    "password": "admin",
+    "email": "quynhtran182003@gmail.com"
 
-    },
-    {
-      "username": "tran",
-      "password": "thq"
-    }
-  ]
-}
+  },
+  {
+    "username": "tran",
+    "password": "thq",
+    "email" : "quynhtran182003@gmail.com"
+  }
+]

@@ -14,11 +14,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="..\style.css">
 </head>
 <body>
     <main class="text-center d-flex justify-content-center align-items-center" style="
-        background-image: url('media\\bgLogin.jpg');
+        background-image: url('..\\media\\bgLogin.jpg');
         height: 100vh;
         background-size: cover;
         background-position: center;
@@ -27,16 +27,16 @@
     >
         <div class="form-box text-white w-50 rounded p-4" style="background-color: rgb(0,0,0,0.5);">
             <div class="form-value d-flex justify-content-center align-items-center h5">
-                <form action="login.php" method="post">
-                    <img src="media\logo.png" alt="" width="80" height="80">
+                <form action="..\PHP\login.php" method="post">
+                    <img src="..\media\logo.png" alt="" width="80" height="80">
                     <h2 class=" text-center">Sign in</h2>
                     <div class="inputbox my-3 border-bottom border-2">
                         <input type="text" name="username" class=" w-75 bg-transparent h5 border-0" style="outline:none;" placeholder="Username"required>
-                        <img src="media\mail.png" alt="">
+                        <img src="..\media\mail.png" alt="">
                     </div>
                     <div class="inputbox my-3 border-bottom border-2">
                         <input type="password" name="password" class="w-75 bg-transparent h5 border-0" style="outline: none;" placeholder="Password"required>
-                        <img src="media\lock.png" alt="">
+                        <img src="..\media\lock.png" alt="">
 
                     </div>
                     <!-- <div class="forget my-4 ">
@@ -45,7 +45,7 @@
                     </div> -->
                     <button class="btn btn-light rounded w-100 h5">Sign in</button>
                     <div class="register">
-                        <p>Don't have a account? <a href="registerPage.php">Register</a></p>
+                        <p>Don't have a account? <a href="..\HTML\registerPage.php">Register</a></p>
                     </div>
                 </form>
             
