@@ -97,7 +97,7 @@
             <?php
                 if(isset($_SESSION['username'])){
                     echo ' 
-                    <a href="..\PHP\logout.php" class="bg-transparent position-absolute top-40 end-0 m-2 p-2 border-0" type="button">
+                    <a href="..\PHP\logout.php" class="bg-transparent position-absolute top-40 end-0 m-2 p-2 border-0" type="button" id="logOutBtn" >
                         <img src="..\media\logout.png" alt="" class="m-1">
                         <span class="h5" id="logOutOpt">Log out</span>
                     </a>
@@ -144,7 +144,7 @@
                                     ';
                                     else{
                                         echo '
-                                            <a href="..\PHP\login.php" type="button"class="btn btn-lg btn-outline-warning w-100">Sign in</a>
+                                            <a href="..\HTML\loginPage.php" type="button"class="btn btn-lg btn-outline-warning w-100">Sign in</a>
                                         ';
                                     }
                             ?>
@@ -159,5 +159,6 @@
 
 
     <script src="..\scripts\script.js"></script>
+    <script src="..\scripts\scriptLocalStorage.js"></script>
 </body>
 </html>

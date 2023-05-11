@@ -2,7 +2,6 @@
 <?php 
     if(isset($_POST['submit'])){
         $user = new RegisterUser($_POST['username'], $_POST['password'], $_POST['email']);
-
     }
 ?>
 <!DOCTYPE html>
@@ -63,8 +62,7 @@
                             Sign Up
                         </span>    
                     </button>
-                    <p class="error"><?php echo @$user->error?></p>
-                    <p class="success"><?php echo @$user->success?></p>
+                    <p class="error text-danger fw-bold pt-2 h5"><?php echo @$user->error?></p>
                 </form>
             
             </div>

@@ -1,3 +1,9 @@
+<?php require("..\\PHP\\login.php")?>
+<?php
+    if(isset($_POST['submit'])){
+        $user = new LoginUser($_POST['username'], $_POST['password']);
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,7 +33,7 @@
     >
         <div class="form-box text-white w-50 rounded p-4" style="background-color: rgb(0,0,0,0.5);">
             <div class="form-value d-flex justify-content-center align-items-center h5">
-                <form action="..\PHP\login.php" method="post">
+                <form method="post">
                     <img src="..\media\logo.png" alt="" width="80" height="80">
                     <h2 class=" text-center">Sign in</h2>
                     <div class="inputbox my-3 border-bottom border-2">
@@ -43,7 +49,8 @@
                             <input type="checkbox"><span class="h5 m-2">Remember Me</span>
                             <a href="#"><span class="h5 m-2">Forget Password</span></a>
                     </div> -->
-                    <button class="btn btn-light rounded w-100 h5">Sign in</button>
+                    <button class="btn btn-light rounded w-100 h5" type="submit" name="submit">Sign in</button>
+                    <p class="error text-danger fw-bold py-2 h5"><?php echo @$user->error?></p>
                     <div class="register">
                         <p>Don't have a account? <a href="..\HTML\registerPage.php">Register</a></p>
                     </div>
