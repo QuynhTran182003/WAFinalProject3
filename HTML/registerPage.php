@@ -1,8 +1,7 @@
-<?php require("..\\PHP\\registration.php")?>
 <?php 
-    if(isset($_POST['submit'])){
-        $user = new RegisterUser($_POST['username'], $_POST['password'], $_POST['email']);
-    }
+    // if(isset($_POST['submit'])){
+    //     $user = new RegisterUser($_POST['username'], $_POST['password'], $_POST['email']);
+    // }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,7 +32,7 @@
     >
         <div class="form-box text-white w-50 rounded p-4" style="background-color: rgb(0,0,0,0.5);">
             <div class="form-value d-flex justify-content-center align-items-center">
-                <form method="post">
+                <form action="..\PHP\registration.php" method="post">
                     <img src="..\media\logo.png" alt="" width="80" height="80">
                     <h2 class=" text-center">Register</h2>
                     
@@ -67,6 +66,12 @@
             
             </div>
         </div>
+
+        <?php
+            if(isset($_GET["error"])){
+                
+            }
+        ?>
     </main>
 </body>
 </html>

@@ -1,5 +1,8 @@
 <?php
     session_start();
+    if(empty($_SESSION['username'])){
+        header('Location: index.php');
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -74,9 +77,6 @@
         </ol>
     </nav>
     <main class="bg-black text-white py-3 d-flex flex-wrap container-fluid row m-0">
-    <!-- <form method="post">
-        <button type="submit">Test</button>
-    </form>     -->
         <div class="content px-sm-4 py-3 col-md-8 col-sm-12 container-fluid">
             <table class="table text-white" id="myTable">
                 <thead>

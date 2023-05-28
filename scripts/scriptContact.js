@@ -1,5 +1,7 @@
 $(document).ready(function(){
-    $("body").addClass(`animated fadeIn`);
+    $("body").addClass(`animated fadeInUp`);
+    // $(".poster").addClass(`animated fadeInUp`);
+
     $(".containerHeader, .containerCollapsed").addClass(`animated fadeInDown`);
 
     $(".sidebar-item").on({

@@ -19,16 +19,17 @@ class Item{
 
 class Cart{
     constructor(){
-        this.cartItems = cartItems;
+        this.cartItems = [];
     }
 
     AddToCart(item){
         this.cartItems.push(item);
     }
 }
-
+// let cartItems = [];
+//array save all products
 let products = [];
-let cartItems=[];
+
 let myCart = new Cart();
 
 function RenderProducts(products){
@@ -121,7 +122,6 @@ $(document).ready(function(){
             for(let i = 0;i < data.length; i++){
                 let product = new Product(data[i].Id, data[i].Product, data[i].Price, data[i].Description, data[i].Category, data[i].Image);
                 products.push(product);
-
             }
             //render it to screen
             RenderProducts(products);
@@ -134,11 +134,9 @@ $(document).ready(function(){
 
                 ShowSuccessMsg(this.id, 1);
                 let newItem = new Item(product, 1);
-
-                myCart.cartItems = JSON.parse(localStorage.getItem('myCart'));
                 myCart.AddToCart(newItem);
-                console.log(myCart);
-                localStorage.setItem("myCart", JSON.stringify(myCart.cartItems));
+                localStorage.setItem('myCart', JSON.stringify(myCart.cartItems));
+
             }),
 
 

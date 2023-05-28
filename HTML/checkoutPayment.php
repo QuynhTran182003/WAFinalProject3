@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(empty($_SESSION['username'])){
+        header('Location: index.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -79,22 +85,22 @@
                         <form class="card-details ">
                             <div class="form-group mb-0">
                                 <p class="text-warning mb-0">Card Number</p> 
-                                <input class="bg-dark border-0 p-2 text-white rounded-pill" type="number" name="card-num" placeholder="1234 5678 9012 3457" id="cno" minlength="16" maxlength="19">
+                                <input class="bg-dark border-0 p-2 text-white rounded-pill" type="number" name="card-num" placeholder="1234 5678 9012 3457" id="cno" minlength="16" maxlength="19" required>
                                 <img src="https://img.icons8.com/color/48/000000/visa.png" width="64px" height="60px"/>
                             </div>
                             <div class="form-group">
                                 <p class="text-warning mb-0">Cardholder's Name</p> 
-                                <input class="bg-dark border-0 p-2 text-white rounded-pill" type="text" name="name" placeholder="Jan Novak" >
+                                <input class="bg-dark border-0 p-2 text-white rounded-pill" type="text" name="name" placeholder="Jan Novak"  required>
                             </div>
                             <div class="form-group pt-2 mb-3">
                                 <div class="row d-flex">
                                     <div class="col-sm-4">
                                         <p class="text-warning mb-0">Expiration</p>
-                                        <input class="bg-dark border-0 p-2 text-white rounded-pill" type="text" name="exp" placeholder="MM/YYYY" id="exp" minlength="7" maxlength="7">
+                                        <input class="bg-dark border-0 p-2 text-white rounded-pill" type="text" name="exp" placeholder="MM/YYYY" id="exp" minlength="7" maxlength="7" required>
                                     </div>
                                     <div class="col-sm-3">
                                         <p class="text-warning mb-0">CVV</p>
-                                        <input class="bg-dark border-0 p-2 text-white rounded-pill" type="password" name="cvv" placeholder="&#9679;&#9679;&#9679;" size="3" minlength="3" maxlength="3">
+                                        <input class="bg-dark border-0 p-2 text-white rounded-pill" type="password" name="cvv" placeholder="&#9679;&#9679;&#9679;" size="3" minlength="3" maxlength="3" required>
                                     </div>
                                 </div>
                             </div>		

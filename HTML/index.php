@@ -43,7 +43,7 @@
                     ';
                 } else{
                     echo '
-                    <a href="..\PHP\login.php" class="h5 mb-0 d-flex align-items-centerposition-relative py-2 border-0" >
+                    <a href="..\HTML\loginPage.php" class="h5 mb-0 d-flex align-items-centerposition-relative py-2 border-0" >
                         <img src="..\media\login.png" alt="" class="m-1">
                         <span class="logInOpt" id="logInOpt">Log in</span>
                     </a>
@@ -70,7 +70,7 @@
             <!-- 1.part selection -->
             <ul class="nav d-flex align-items-center">
                 <li class="nav-item">
-                    <a class="nav-link text-white" href="intro.php"><p class="h4">Home</p></a>
+                    <a class="nav-link text-white" href="index.php"><p class="h4">Home</p></a>
                 </li>
                 <span class="dividerVertical text-white"></span>
                 <li class="nav-item">

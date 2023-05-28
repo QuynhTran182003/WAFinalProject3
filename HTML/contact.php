@@ -68,7 +68,7 @@
     <?php include ".\\core\\header.php"?>
 
     <main class="bg-black text-white">
-        <section><img src="..\media/backgroundContact.jpg" alt="" class="w-100 opacity-75"></section>
+        <section class="poster"><img src="..\media/backgroundContact.jpg" alt="" class="poster w-100 opacity-75"></section>
         <!-- About reservation -->
         <div class="reservation d-flex justify-content-evenly align-items-center row m-0">
             <!-- additional info -->
