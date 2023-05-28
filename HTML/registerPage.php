@@ -91,7 +91,8 @@
                     
                 }
                 else if($_GET["error"] == "none"){
-                    echo "<p>You have signed up</p>";
+                    header('Location: ..\\HTML\\loginPage.php');
+                    exit();
                     
                 }
             }

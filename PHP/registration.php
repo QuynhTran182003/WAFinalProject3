@@ -32,7 +32,7 @@
 
         createUser($conn, $username, $email, $password);
     } else{
-        header('Location: ..\\HTML\\loginPage.php');
+        header('Location: ..\\HTML\\registerPage.php');
         exit();
     }
 
