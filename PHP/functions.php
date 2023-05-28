@@ -39,7 +39,7 @@
         return $result;
     }
     function uidExisted($conn, $username, $email) {
-        $sql = "SELECT * FROM users WHERE userId = ? OR userEmail = ?;";
+        $sql = "SELECT * FROM users WHERE username = ? OR userEmail = ?;";
         $stmt = mysqli_stmt_init($conn);
 
         // prepare sql command to ensure the security of db
