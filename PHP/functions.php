@@ -81,4 +81,36 @@
         exit();
 
     }
+
+    function emptyInputLogin($username, $password){
+        $result;
+        if(empty($username) || empty($password)){
+            $result = true;
+        } else{
+            $result = false;
+        }
+        return $result;
+    }
+
+    function loginUser($conn, $username, $password){
+        $uidExists = uidExisted($conn, $username, $username); //either username or email
+
+        if($uidExists === false){
+            header("location: ..\\HTML\\loginPage.php?error=wronglogin");
+            exit();
+        }
+
+        $pwdHashed = $uidExists["userPwd"]; //get the value of col usersPwd
+        $checkPwd = password_verify($pwd, $pwdHashed);
+
+        if($checkPwd === false){
+            header("location: ..\\HTML\\loginPage.php?error=wronglogin");
+            exit();
+        } else if($checkPwd === true){
+            session_start();
+            $_SESSION["username"] = $uidExists["username"];
+            header("location: ..\\HTML\\index.php");
+            exit();
+        }
+    }
 ?>
