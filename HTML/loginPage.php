@@ -44,10 +44,27 @@
                         <img src="..\media\lock.png" alt="">
 
                     </div>
+
+
+
                     <!-- <div class="forget my-4 ">
                             <input type="checkbox"><span class="h5 m-2">Remember Me</span>
                             <a href="#"><span class="h5 m-2">Forget Password</span></a>
                     </div> -->
+
+
+                    <?php
+                        if(isset($_GET["error"])){
+                            if($_GET["error"] == "emptyinput"){
+                                echo "<p>Fill in all fields!</p>";
+                            }
+                            else if($_GET["error"] == "wronglogin"){
+                                echo "<p>Incorrect login data!</p>";
+                                
+                            }
+                            
+                        }
+                    ?>
                     <button class="btn btn-light rounded w-100 h5" type="submit" name="submit">Sign in</button>
                     <p class="error text-danger fw-bold py-2 h5"><?php echo @$user->error?></p>
                     <div class="register">

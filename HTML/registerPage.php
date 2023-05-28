@@ -65,13 +65,40 @@
                 </form>
             
             </div>
-        </div>
-
-        <?php
+            <?php
             if(isset($_GET["error"])){
-                
+                if($_GET["error"] == "emptyinput"){
+                    echo "<p>Fill in all fields!</p>";
+                }
+                else if($_GET["error"] == "invaliduid"){
+                    echo "<p>Choose a proper username!</p>";
+                    
+                }
+                else if($_GET["error"] == "invalidemail"){
+                    echo "<p>Invalid email</p>";
+                    
+                }
+                else if($_GET["error"] == "unmatchpassword"){
+                    echo "<p>Passwords dont match!</p>";
+                    
+                }
+                else if($_GET["error"] == "usernametaken"){
+                    echo "<p>Username has been taken!</p>";
+                    
+                }
+                else if($_GET["error"] == "stmtfailed"){
+                    echo "<p>Something went wrong, please try again later!</p>";
+                    
+                }
+                else if($_GET["error"] == "none"){
+                    echo "<p>You have signed up</p>";
+                    
+                }
             }
         ?>
+        </div>
+
+        
     </main>
 </body>
 </html>
