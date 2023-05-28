@@ -53,20 +53,19 @@
                     </div> -->
 
 
-                    <?php
+                    <button class="btn btn-light rounded w-100 h5" type="submit" name="submit">Sign in</button>
+                    <p class="error text-danger fw-bold py-2 h5"> <?php
                         if(isset($_GET["error"])){
                             if($_GET["error"] == "emptyinput"){
-                                echo "<p>Fill in all fields!</p>";
+                                echo "Fill in all fields!";
                             }
                             else if($_GET["error"] == "wronglogin"){
-                                echo "<p>Incorrect login data!</p>";
+                                echo "Incorrect login data!";
                                 
                             }
                             
                         }
-                    ?>
-                    <button class="btn btn-light rounded w-100 h5" type="submit" name="submit">Sign in</button>
-                    <p class="error text-danger fw-bold py-2 h5"><?php echo @$user->error?></p>
+                    ?></p>
                     <div class="register">
                         <p>Don't have a account? <a href="..\HTML\registerPage.php">Register</a></p>
                     </div>

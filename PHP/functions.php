@@ -100,8 +100,8 @@
             exit();
         }
 
-        $pwdHashed = $uidExists["userPwd"]; //get the value of col usersPwd
-        $checkPwd = password_verify($pwd, $pwdHashed);
+        $pwdHashed = $uidExists["userPwd"]; //get the value of col userPwd
+        $checkPwd = password_verify($password, $pwdHashed);
 
         if($checkPwd === false){
             header("location: ..\\HTML\\loginPage.php?error=wronglogin");
