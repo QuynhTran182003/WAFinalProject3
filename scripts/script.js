@@ -20,4 +20,8 @@ $(document).ready(function(){
             $(this).removeClass('text-warning');
         }
     })
+
+    $(".logOutBtn").click(function(){
+        localStorage.removeItem('myCart');
+    })
 });

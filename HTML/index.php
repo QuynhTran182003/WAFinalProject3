@@ -36,7 +36,7 @@
             <?php
                 if(isset($_SESSION['username'])){
                     echo ' 
-                    <a href="..\PHP\logout.php" class="h5 mb-0 d-flex align-items-center position-relative py-2 border-0" >
+                    <a href="..\PHP\logout.php" class="h5 mb-0 d-flex align-items-center position-relative py-2 border-0 logOutBtn" id="">
                         <img src="..\media\logout.png" alt="" class="m-1">
                         <span class="" id="logOutOpt">Log out</span>
                     </a>
@@ -97,7 +97,7 @@
             <?php
                 if(isset($_SESSION['username'])){
                     echo ' 
-                    <a href="..\PHP\logout.php" class="bg-transparent position-absolute top-40 end-0 m-2 p-2 border-0" type="button" id="logOutBtn" >
+                    <a href="..\PHP\logout.php" class="bg-transparent position-absolute top-40 end-0 m-2 p-2 border-0 logOutBtn" type="button">
                         <img src="..\media\logout.png" alt="" class="m-1">
                         <span class="h5" id="logOutOpt">Log out</span>
                     </a>

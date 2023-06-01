@@ -29,9 +29,18 @@
     <div class=" text-center py-3">
         <img src="..\media\success.png" alt="">
         <p class="p-2 h3 ">Your order is complete</p>
+        <p>We have sent you a confirmation email to <?php
+        
+        ?>.</p>
     </div>
 </main>
-<?php include '.\\core\\footer.php'?>
 
+<?php include '.\\core\\footer.php'?>
+<script>
+    setTimeout(function() {
+        window.location.href = '..\\HTML\\index.php';
+      }, 5000);
+      localStorage.removeItem('myCart');
+</script>
 </body>
 </html>

@@ -80,7 +80,9 @@
         <div class="content px-sm-4 py-3 col-md-8 col-sm-12 container-fluid">
             <table class="table text-white" id="myTable">
                 <thead>
-                    <tr>
+                    <tr class="head-table">
+                      <th scope="col"></th>
+                      <th scope="col">Id</th>
                       <th scope="col-6">Product</th>
                       <th scope="col-4">Price</th>
                       <th scope="col-1">Quantity</th>
@@ -90,9 +92,18 @@
                   <tbody class="table-group-divider">
                   </tbody>
             </table>
-            <div class="btnApply d-flex justify-content-end">
-
+            <div class="options d-flex justify-content-end">
+                <div class="back-to-menu m-2">
+                    <a href="menu.php">
+                        <button class="btn btn-warning">< Back To Menu</button>
+                    </a>    
+                </div>
+                <div class="btnApply m-2 ">
+                    <!-- <button type="button" class="btn btn-success" id="btnAppChange">Apply Changes</button> -->
+                </div>
             </div>
+            
+
         </div>
         <div class="infoOrder px-4 py-3 col-md-4 container-fluid">
             <section>
@@ -119,6 +130,6 @@
     </main>
     <?php include '.\\core\\footer.php'?>
 
-<script src="..\scripts\scriptMyOrder.js"></script>
+<script src="..\scripts\scriptMyOrder.js" type="module"></script>
 </body>
 </html>

@@ -82,7 +82,7 @@
                 <div class="col-sm-12 d-flex justify-content-center">
                     <div class="card w-50 p-4 bg-black border-dark text-white ">
                         <p class="heading text-center h4">PAYMENT DETAILS</p>
-                        <form class="card-details ">
+                        <form class="card-details" method="POST" action="payment.php">
                             <div class="form-group mb-0">
                                 <p class="text-warning mb-0">Card Number</p> 
                                 <input class="bg-dark border-0 p-2 text-white rounded-pill" type="number" name="card-num" placeholder="1234 5678 9012 3457" id="cno" minlength="16" maxlength="19" required>

@@ -144,7 +144,7 @@
 
     <?php include ".\\core\\footer.php"?>
 
-    <script src="..\scripts\scriptOrderPg.js"></script>
+    <script src="..\scripts\scriptOrderPg.js" type="module"></script>
 
 </body>
 </html>

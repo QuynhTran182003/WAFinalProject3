@@ -6,3 +6,15 @@ Jak nainstalovat a spustit:
 Nainstalovat Node.js (pokud to nemáte)
 V terminálu zadejte příkaz: npm start
 
+<!-- php.ini -->
+SMTP=smtp.gmail.com
+smtp_port=587
+sendmail_from = quynhtran182003@gmail.com
+sendmail_path ="\"C:\xampp\sendmail\sendmail.exe\" -t"
+
+<!-- sendmail.ini -->
+SMTP=smtp.gmail.com
+smtp_port=587
+smtp_ssl=tls
+auth_username=quynhtran182003@gmail.com
+auth_password=amkuryvqrxohybiv

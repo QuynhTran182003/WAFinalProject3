@@ -1,5 +1,5 @@
 //objects
-class Product{
+ class Product{
     constructor(id, productName, price, descb, category, image){
         this.id = id;
         this.productName = productName;
@@ -10,14 +10,21 @@ class Product{
     }
 }
 
-class Item{
+export class Item{
     constructor(product, quantity){
         this.product = product;
         this.quantity = quantity;
     }
+
+    // bufferItem(idProduct, productName, price, quantity){
+    //     this.idProduct = idProduct;
+    //     this.productName = productName;
+    //     this.price = price;
+    //     this.quantity = quantity;
+    // }
 }
 
-class Cart{
+export class Cart{
     constructor(){
         this.cartItems = [];
     }
@@ -25,12 +32,15 @@ class Cart{
     AddToCart(item){
         this.cartItems.push(item);
     }
+    clear(){
+        this.cartItems = [];
+    }
 }
 // let cartItems = [];
 //array save all products
-let products = [];
+export let products = [];
 
-let myCart = new Cart();
+export let myCart = new Cart();
 
 function RenderProducts(products){
     for(let i = 0; i < products.length; i++){
@@ -131,14 +141,16 @@ $(document).ready(function(){
                 let product = products.find(obj => {
                     return obj.id == this.id;
                 });
-
                 ShowSuccessMsg(this.id, 1);
                 let newItem = new Item(product, 1);
+                if (localStorage.getItem('myCart') !== null) {
+                    // Variable exists in localStorage
+                    myCart.cartItems = JSON.parse(localStorage.getItem('myCart'));
+                }
                 myCart.AddToCart(newItem);
                 localStorage.setItem('myCart', JSON.stringify(myCart.cartItems));
 
             }),
-
 
             // show a modal of product by clicking, then dynamically change the subtotal when input is on change
             $(".card-body, .card-img-top").on({
@@ -188,19 +200,23 @@ $(document).ready(function(){
                     $(".myModalDiv").html(html);
                     $("#myModal").modal('show');
                     
-                        //automatically calculate subtotal of item 
-                        $('#inputQuantity').on("change", () => {subtotal(product.price)});
+                    //automatically calculate subtotal of item 
+                    $('#inputQuantity').on("change", () => {subtotal(product.price)});
+                    
+                    $("#btnAddInModal").click(function(){
+                        $("#myModal").modal('hide');
+                        ShowSuccessMsg(product.id, $('#inputQuantity').val());
+                        let newItem = new Item(product, $('#inputQuantity').val());
                         
-                        $("#btnAddInModal").click(function(){
-                            ShowSuccessMsg(product.id, $('#inputQuantity').val());
-                            let newItem = new Item(product, $('#inputQuantity').val());
-                            
+                        if (localStorage.getItem('myCart') !== null) {
+                            // Variable exists in localStorage
                             myCart.cartItems = JSON.parse(localStorage.getItem('myCart'));
-                            myCart.AddToCart(newItem);
-                            localStorage.setItem("myCart", JSON.stringify(myCart.cartItems));
-                        })
+                        }
+                        myCart.AddToCart(newItem);
+                        localStorage.setItem("myCart", JSON.stringify(myCart.cartItems));
+
+                    })
                 }
-                
             })
         }
     })

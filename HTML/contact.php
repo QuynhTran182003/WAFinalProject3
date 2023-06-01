@@ -81,7 +81,7 @@
             <!-- reservation form -->
             <section class="col-lg-4 reservationForm d-flex align-items-center flex-column">
                 <h1 class="p-4">Make a Resevertion</h1>
-                <form action="" class="border-top py-4 border-light container-sm">
+                <form action="..\PHP\reserve.php" method="post" class="border-top py-4 border-light container-sm">
                     <div class=" mb-3 d-flex align-items-center ">
                         <label for="name" class="col-4">Name</label>
                         <div class="col-8">
@@ -99,7 +99,7 @@
                     <div class=" mb-3 d-flex align-items-center ">
                         <label for="email" class="col-4">Email</label>
                         <div class="col-8">
-                        <input type="text" class="text-white form-control  bg-dark border border-dark" id="email" required>
+                        <input type="text" class="text-white form-control  bg-dark border border-dark" id="email" name="email" required>
                         </div>
                     </div>
                     <div class="mb-3 d-flex align-items-center ">
@@ -111,7 +111,7 @@
                     <div class="mb-3 d-flex align-items-center">
                         <label for="name" class="col-4">Number of people</label>
                         <div class="col-8">
-                            <select class="form-select bg-dark text-white border border-dark">
+                            <select class="form-select bg-dark text-white border border-dark" id="mySelect" name="numberPeople">
                                 <option selected>Select number of people</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -127,15 +127,14 @@
                         </div>
                     </div>
                     <div class="mb-3 d-flex align-items-center ">
-                        <label for="name" class="col-4">Date & Time</label>
+                        <label for="name" class="col-4" >Date & Time</label>
                         <div class="d-flex col-8">
-                            <input id="date" class="text-white form-control me-2 bg-dark text-white border border-dark " type="date" />
-                            <input id="time" class="text-white form-control bg-dark text-white border border-dark"  type="time" />
+                            <input id="date" class="text-white form-control me-2 bg-dark text-white border border-dark " name="date" type="date" />
+                            <input id="time" class="text-white form-control bg-dark text-white border border-dark" name="time" type="time" />
                         </div>
                     </div>
                     <div class="text-center">
-                        <button type="submit" class="w-100 btn btn-warning py-2">Reserve</button>
-
+                        <button type="submit" name="submit" class="w-100 btn btn-warning py-2">Reserve</button>
                     </div>
                 </form>
             </section>
