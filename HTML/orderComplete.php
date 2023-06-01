@@ -29,9 +29,7 @@
     <div class=" text-center py-3">
         <img src="..\media\success.png" alt="">
         <p class="p-2 h3 ">Your order is complete</p>
-        <p>We have sent you a confirmation email to <?php
-        
-        ?>.</p>
+        <p>We have sent you a confirmation email.</p>
     </div>
 </main>
 
