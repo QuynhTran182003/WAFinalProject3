@@ -10,8 +10,6 @@
     
     // echo $numberPeople;
     $subject = 'Confirmation of reservation';
-    
-
     $message = " Dear $name $lastName, your reservation has been confirmed.
     \nSummary of reservation:
     \nName: $name $lastName
@@ -20,8 +18,7 @@
     \nWe are looking forward seeing you!
     \nBest regards, Shiba Team ";
     $headers = "From: quynhtran182003@gmail.com";
-    // ini_set('SMTP', 'smtp.gmail.com');
-    // ini_set('smtp_port', '465');
+    
     // Send email
     if (mail($email, $subject, $message, $headers)) {
         header('location: ..\\HTML\\orderComplete.php');

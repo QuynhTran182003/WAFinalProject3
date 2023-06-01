@@ -172,7 +172,5 @@ $(document).ready(function(){
             }
             localStorage.setItem("myCart", JSON.stringify(myCart.cartItems));
             location.reload();
-
         });
-
 })
