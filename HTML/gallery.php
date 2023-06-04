@@ -35,14 +35,14 @@ session_start()
             <?php
                 if(isset($_SESSION['username'])){
                     echo ' 
-                    <a href="logout.php" class="h5 mb-0 d-flex align-items-center position-relative py-2 border-0" >
+                    <a href="..\PHP\logout.php" class="h5 mb-0 d-flex align-items-center position-relative py-2 border-0" >
                         <img src="..\media\logout.png" alt="" class="m-1">
                         <span class="" id="logOutOpt">Log out</span>
                     </a>
                     ';
                 } else{
                     echo '
-                    <a href="login.php" class="h5 mb-0 d-flex align-items-centerposition-relative py-2 border-0" >
+                    <a href="..\PHP\login.php" class="h5 mb-0 d-flex align-items-centerposition-relative py-2 border-0" >
                         <img src="..\media\login.png" alt="" class="m-1">
                         <span class="logInOpt" id="logInOpt">Log in</span>
                     </a>
@@ -110,6 +110,8 @@ session_start()
 
 
     <script src="..\scripts\scriptGalle.js"></script>
+    <script src="..\scripts\scriptLocalStorage.js"></script>
+
 
 </body>
 </html>

@@ -36,14 +36,14 @@
             <?php
                 if(isset($_SESSION['username'])){
                     echo ' 
-                    <a href="logout.php" class="h5 mb-0 d-flex align-items-center position-relative py-2 border-0" >
+                    <a href="..\PHP\logout.php" class="h5 mb-0 d-flex align-items-center position-relative py-2 border-0" >
                         <img src="..\media\logout.png" alt="" class="m-1">
                         <span class="" id="logOutOpt">Log out</span>
                     </a>
                     ';
                 } else{
                     echo '
-                    <a href="login.php" class="h5 mb-0 d-flex align-items-centerposition-relative py-2 border-0" >
+                    <a href="..\PHP\login.php" class="h5 mb-0 d-flex align-items-centerposition-relative py-2 border-0" >
                         <img src="..\media\login.png" alt="" class="m-1">
                         <span class="logInOpt" id="logInOpt">Log in</span>
                     </a>
@@ -72,7 +72,7 @@
         <!-- About reservation -->
         <div class="reservation d-flex justify-content-evenly align-items-center row m-0">
             <!-- additional info -->
-            <section class="col-lg-8 w-50 py-5 mx-3 text-center">
+            <section class="col-lg-8 w-50 py-5 mx-sm-3 text-center">
                 <p class="h5">Dear customers,</p>
                 <p class="h5">in order to avoid a long waiting time and the case of rejection due to a lot of orders at the same time, we recommend that you make a reservation or call at least 2-3 hours in advance. This way we could better bring you the best quality of all dishes.</p><br>
                 <p class="h5">Thank you for your understanding and cooperation.</p><br>
