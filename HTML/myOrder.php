@@ -131,5 +131,7 @@
     <?php include '.\\core\\footer.php'?>
 
 <script src="..\scripts\scriptMyOrder.js" type="module"></script>
+<script src="..\scripts\scriptLocalStorage.js"></script>
+
 </body>
 </html>

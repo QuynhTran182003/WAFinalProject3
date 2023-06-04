@@ -1,7 +1,8 @@
 # WAFinalProject3
 Název: Shiba Sushi
-Funkce webové stránky: enable order online
-Použité technologie: Bootstrap, jQuery, CSS
+Funkce webové stránky: udelat rezervaci s poslanim email zpatky pro potvrzeni + simple order online
+
+Použité technologie: Bootstrap, jQuery, CSS, json-server na vlastni api (posle json soubor na API)
 Jak nainstalovat a spustit: 
 Nainstalovat Node.js (pokud to nemáte)
 V terminálu zadejte příkaz: npm start

@@ -1,7 +1,4 @@
 <?php
-    // if(isset($_POST['submit'])){
-    //     $user = new LoginUser($_POST['username'], $_POST['password']);
-    // }
 ?>
 <!DOCTYPE html>
 <html lang="en">

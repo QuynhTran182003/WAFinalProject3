@@ -68,8 +68,8 @@
     </div>
     <?php include ".\\core\\header.php"?>
 
-    <nav style="--bs-breadcrumb-divider: '>'; $breadcrumb-divider-color: 'white';" class="h4 pt-4 d-flex justify-content-center" aria-label="breadcrumb">
-        <ol class="breadcrumb">
+    <nav style="--bs-breadcrumb-divider: '>';" class="h4 pt-4 d-flex justify-content-center" aria-label="breadcrumb">
+        <ol class="breadcrumb d-flex flex-wrap">
             <li class="breadcrumb-item text-white "><a href="myOrder.php">Order Details</a></li>
             <li class="breadcrumb-item active text-warning" aria-current="page"><a href="#">Checkout & Payment</a></li>
             <li class="breadcrumb-item text-white" aria-current="page"><a href="#">Order Complete</a></li>
@@ -78,14 +78,13 @@
     <main class="">
         <form action="orderComplete.php" method="post">
         <div class="container-fluid ">
-            <div class="row">
-                <div class="col-sm-12 d-flex justify-content-center">
-                    <div class="card w-50 p-4 bg-black border-dark text-white ">
+            <div class="row d-flex justify-content-center">
+                    <div class="col-lg-4 col-md-6 col-sm-12 card p-4 bg-black border-dark text-white ">
                         <p class="heading text-center h4">PAYMENT DETAILS</p>
                         <form class="card-details" method="POST" action="payment.php">
                             <div class="form-group mb-0">
                                 <p class="text-warning mb-0">Card Number</p> 
-                                <input class="bg-dark border-0 p-2 text-white rounded-pill" type="number" name="card-num" placeholder="1234 5678 9012 3457" id="cno" minlength="16" maxlength="19" required>
+                                <input class="bg-dark border-0 p-2 text-white rounded-pill" type="number" name="card-num" placeholder="1234 5678 9012 3457" id="cno" minlength="" maxlength="19" required>
                                 <img src="https://img.icons8.com/color/48/000000/visa.png" width="64px" height="60px"/>
                             </div>
                             <div class="form-group">
@@ -93,12 +92,12 @@
                                 <input class="bg-dark border-0 p-2 text-white rounded-pill" type="text" name="name" placeholder="Jan Novak"  required>
                             </div>
                             <div class="form-group pt-2 mb-3">
-                                <div class="row d-flex">
-                                    <div class="col-sm-4">
+                                <div class="row d-flex flex-wrap">
+                                    <div class="col-sm">
                                         <p class="text-warning mb-0">Expiration</p>
-                                        <input class="bg-dark border-0 p-2 text-white rounded-pill" type="text" name="exp" placeholder="MM/YYYY" id="exp" minlength="7" maxlength="7" required>
+                                        <input class="bg-dark border-0 p-2 text-white rounded-pill" type="text" name="exp" placeholder="MM/YYYY" id="exp" minlength="" maxlength="7" required>
                                     </div>
-                                    <div class="col-sm-3">
+                                    <div class="col-sm">
                                         <p class="text-warning mb-0">CVV</p>
                                         <input class="bg-dark border-0 p-2 text-white rounded-pill" type="password" name="cvv" placeholder="&#9679;&#9679;&#9679;" size="3" minlength="3" maxlength="3" required>
                                     </div>
@@ -108,13 +107,13 @@
                             <button type="submit" class="btn btn-primary rounded-pill bg-warning border-0 text-black">Pay ,- KC</button>
                         </form>
                     </div>
-                </div>
             </div>
         </div>
         </form>
 
     </main>
     <?php include ".\\core\\footer.php"?>
+    <script src="..\scripts\scriptLocalStorage.js"></script>
 
 </body>
 </html>

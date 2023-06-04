@@ -104,10 +104,17 @@
         $checkPwd = password_verify($password, $pwdHashed);
 
         if($checkPwd === false){
+
+            if (!isset($_SESSION['login_attempts'])) {
+                $_SESSION['login_attempts'] = 1;
+            } else {
+                $_SESSION['login_attempts']++;
+            }
+
             header("location: ..\\HTML\\loginPage.php?error=wronglogin");
             exit();
         } else if($checkPwd === true){
-            session_start();
+        session_start();
             $_SESSION["username"] = $uidExists["username"];
             header("location: ..\\HTML\\index.php");
             exit();
