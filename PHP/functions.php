@@ -93,13 +93,16 @@
     }
 
     function loginUser($conn, $username, $password){
-        $uidExists = uidExisted($conn, $username, $username); //either username or email
+        //check either username or email existed, return false or the row
+        $uidExists = uidExisted($conn, $username, $username); 
+        
 
         if($uidExists === false){
             header("location: ..\\HTML\\loginPage.php?error=wronglogin");
             exit();
         }
 
+        //check password
         $pwdHashed = $uidExists["userPwd"]; //get the value of col userPwd
         $checkPwd = password_verify($password, $pwdHashed);
 

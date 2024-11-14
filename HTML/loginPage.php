@@ -20,7 +20,7 @@
 </head>
 <body>
     <main class="text-center d-flex justify-content-center align-items-center" style="
-        background-image: url('..\\media\\bgLogin.jpg');
+        background-image: url('..\media\bgLogin.jpg');
         height: 100vh;
         background-size: cover;
         background-position: center;
@@ -58,7 +58,6 @@
                             }
                             else if($_GET["error"] == "wronglogin"){
                                 echo "Incorrect login data!";
-                                
                             }
                             
                         }
